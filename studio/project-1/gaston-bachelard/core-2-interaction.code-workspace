@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../core-2-interaction"
+		},
+		{
+			"path": "../fire"
+		},
+		{
+			"path": "../abandonment"
+		},
+		{
+			"path": "../fruit"
+		},
+		{
+			"path": "../words"
+		},
+		{
+			"path": "../beginning"
+		},
+		{
+			"path": "../end"
+		},
+		{
+			"path": "../timeline"
+		},
+		{
+			"path": "../barbara-smith"
+		},
+		{
+			"path": "../cy-twombly"
+		},
+		{
+			"path": "../roland-barthes page"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "gaston-bachelard"
+	}
+}
