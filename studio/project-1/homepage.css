@@ -1,0 +1,110 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "H1";
+    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+}
+
+h1 {
+    font-family: "H1", cursive;
+    font-size: 110px;
+    text-align: center;
+    position: relative;
+    color: rgb(10, 123, 2);
+    margin-bottom: 50px;
+}
+
+@font-face {
+    font-family: "H2";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+}
+
+h2 {
+    font-family: "H2", sans-serif;
+    color: rgb(10, 123, 2);
+    text-align: center;
+    font-size: 30px;
+    margin-top: 198px;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.rotating-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: auto; /* Center the container */
+}
+
+.circle-text {
+    margin: 0; 
+    font-family: "Heavitas.ttf", sans-serif;
+    color: rgb(128, 177, 22);
+    text-align: center;
+    z-index: 1; 
+    font-size: 12px;
+}
+
+.rotating-circle.circle1 {
+    width: 400px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px dashed rgb(10, 123, 2);
+    margin-top: 130px;
+    animation: rotate1 3s linear infinite;
+}
+
+.rotating-circle.circle2 {
+    width: 400px; /* Adjust the size as needed */
+    height: 500px; /* Adjust the size as needed */
+    border-radius: 50%;
+    position: absolute;
+    border: 3px dashed rgb(10, 123, 2);
+    margin-top: 130px;
+    animation: rotate2 5s linear infinite;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@font-face {
+    font-family: "pre";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+}
+
+pre {
+    font-family: "pre", sans-serif;
+}
+
+em {
+    font-family: "H1", cursive;
+}
+
+
