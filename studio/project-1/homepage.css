@@ -1,6 +1,7 @@
 body {
     background-color: rgb(255, 255, 255);
     color: white;
+   overflow: hidden;
 }
 
 @font-face {
@@ -16,7 +17,7 @@ h1 {
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: rgb(10, 123, 2);
     -webkit-text-fill-color: rgb(10, 123, 2);
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 60px;
     white-space: nowrap;
     padding: 0 6rem;
@@ -46,12 +47,12 @@ h2 {
     -webkit-text-fill-color: rgb(128, 177, 22);
     text-align: center;
     font-size: 38px;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     white-space: nowrap;
     padding: 0 1rem;
     letter-spacing: 1px;
-    animation: moveH2 7000ms linear infinite;
+    animation: moveH2 15s linear infinite;
 }
 @keyframes moveH2 {
     100% {
@@ -88,23 +89,200 @@ h2 {
 }
 h3 {
     font-family: "H1", cursive;
-    font-size: 20px;
+    font-size: 90px;
     white-space: nowrap;
     color: transparent;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: rgb(10, 123, 2);
-    -webkit-text-fill-color: rgb(10, 123, 2);
-    margin-top: 25px;
-    margin-bottom: 25px;
+    -webkit-text-stroke-color: rgb(128, 177, 22);
+    -webkit-text-fill-color: rgb(128, 177, 22);
+    margin-top: 20px;
+    margin-bottom: 20px;
     white-space: nowrap;
     padding: 0 6rem;
     letter-spacing: 1px;
-    animation: moveH1 6000ms linear infinite; 
+    animation: moveH2 3600ms linear infinite; 
 }
 .different-font {
     font-family: "Heavitas", sans-serif;
     font-size: 20px;
 }
+.different-font-2 {
+    font-family: "H1", cursive;
+    font-size: 50px; 
+}
+h4 {
+    font-family: "H2", sans-serif;
+    font-size: 15px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(128, 177, 22);
+    -webkit-text-fill-color: rgb(128, 177, 22);
+    margin-top: 17px;
+    margin-bottom: 17px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH2 3600ms linear infinite; 
+}
+.endings {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(10, 123, 2);
+    overflow: hidden;
+}
+.last-line {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden;
+}
+h5 {
+    font-family: "H2", sans-serif;
+    font-size: 60px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH1 3700ms linear infinite; 
+}
+h6 {
+    font-family: "H2", sans-serif;
+    font-size: 40px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-top: 15px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH1 2800ms linear infinite; 
+}
+.dot-dot-dot {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden; 
+}
+.true {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(10, 123, 2);
+    overflow: hidden; 
+}
+
+p {
+    font-family: "H2", sans-serif;
+    font-size: 60px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-top: 7px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH1 2800ms linear infinite; 
+}
+/* Styling for Enter Button */
+.enter-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-decoration: none;
+}
+
+.enter-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    border: 10px solid rgb(10, 123, 2); /* Initial green border color */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.enter-container:hover {
+    border-color: pink; /* Pink border color on hover */
+}
+
+.enter-text {
+    font-family: "Heavitas", sans-serif;
+    font-size: 30px;
+    color: rgb(10, 123, 2); /* Dark green text color */
+    margin: 0;
+    transition: color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.enter-container:hover .enter-text {
+    color: pink; /* Pink color for "ENTER" text on hover */
+}
 
 
+.enter-text {
+    font-family: "Heavitas", sans-serif;
+    font-size: 30px;
+    color: rgb(10, 123, 2); /* Dark green text color */
+    margin: 0;
+}
 
+/* Media query for phones and smaller screens */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 90px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 70px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    h5 {
+        font-size: 50px;
+    }
+
+    h6 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 50px;
+    }
+
+    .enter-container {
+        width: 150px;
+        height: 150px;
+        border-width: 6px;
+    }
+
+    .enter-text {
+        font-size: 16px;
+    }
+}

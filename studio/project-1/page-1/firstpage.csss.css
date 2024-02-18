@@ -4,33 +4,6 @@ body {
     margin: 0;
 }
 
-@font-face {
-    font-family: "H1";
-    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
-}
-
-h1 {
-    font-family: "H1", cursive;
-    font-size: 110px;
-    text-align: center;
-    position: relative;
-    color: rgb(10, 123, 2);
-    margin-bottom: 50px;
-}
-
-@font-face {
-    font-family: "H2";
-    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
-}
-
-h2 {
-    font-family: "H2", sans-serif;
-    color: rgb(10, 123, 2);
-    text-align: center;
-    font-size: 30px;
-    margin-top: 198px;
-}
-
 .content {
     text-align: center;
     padding: 20px;
@@ -53,6 +26,7 @@ h2 {
     color: rgb(128, 177, 22);
     text-align: center;
     z-index: 1; 
+    margin-top: 250px;
     font-size: 12px;
 }
 
@@ -62,7 +36,7 @@ h2 {
     border-radius: 50%;
     position: absolute;
     border: 3px dashed rgb(10, 123, 2);
-    margin-top: 130px;
+    margin-top: 400px; /* Adjusted margin-top */
     animation: rotate1 3s linear infinite;
 }
 
@@ -72,7 +46,7 @@ h2 {
     border-radius: 50%;
     position: absolute;
     border: 3px dashed rgb(10, 123, 2);
-    margin-top: 130px;
+    margin-top: 400px; /* Adjusted margin-top */
     animation: rotate2 5s linear infinite;
 }
 
@@ -106,17 +80,3 @@ pre {
 em {
     font-family: "H1", cursive;
 }
-.parent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    border: rgb(10, 123, 2);
-    border-style: dashed 20px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    
-    
