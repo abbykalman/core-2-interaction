@@ -1,7 +1,6 @@
 body {
     background-color: rgb(255, 255, 255);
     color: white;
-    margin: 0;
 }
 
 @font-face {
@@ -11,11 +10,27 @@ body {
 
 h1 {
     font-family: "H1", cursive;
-    font-size: 110px;
-    text-align: center;
-    position: relative;
-    color: rgb(10, 123, 2);
-    margin-bottom: 50px;
+    font-size: 135px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH1 6000ms linear infinite;
+}
+
+@keyframes moveH1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @font-face {
@@ -25,86 +40,71 @@ h1 {
 
 h2 {
     font-family: "H2", sans-serif;
-    color: rgb(10, 123, 2);
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(128, 177, 22);
+    -webkit-text-fill-color: rgb(128, 177, 22);
     text-align: center;
-    font-size: 30px;
-    margin-top: 198px;
+    font-size: 38px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    white-space: nowrap;
+    padding: 0 1rem;
+    letter-spacing: 1px;
+    animation: moveH2 7000ms linear infinite;
 }
-
-.content {
-    text-align: center;
-    padding: 20px;
-}
-
-.rotating-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    height: 300px;
-    width: 300px;
-    margin: auto; /* Center the container */
-}
-
-.circle-text {
-    margin: 0; 
-    font-family: "Heavitas.ttf", sans-serif;
-    color: rgb(128, 177, 22);
-    text-align: center;
-    z-index: 1; 
-    font-size: 12px;
-}
-
-.rotating-circle.circle1 {
-    width: 400px;
-    height: 500px;
-    border-radius: 50%;
-    position: absolute;
-    border: 3px dashed rgb(10, 123, 2);
-    margin-top: 130px;
-    animation: rotate1 3s linear infinite;
-}
-
-.rotating-circle.circle2 {
-    width: 400px; /* Adjust the size as needed */
-    height: 500px; /* Adjust the size as needed */
-    border-radius: 50%;
-    position: absolute;
-    border: 3px dashed rgb(10, 123, 2);
-    margin-top: 130px;
-    animation: rotate2 5s linear infinite;
-}
-
-@keyframes rotate1 {
-    0% {
-        transform: rotate(0deg);
-    }
+@keyframes moveH2 {
     100% {
-        transform: rotate(360deg);
+        transform: translateX(0);
     }
-}
-
-@keyframes rotate2 {
     0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(-360deg);
+        transform: translateX(-100%);
     }
 }
-
-@font-face {
-    font-family: "pre";
-    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
-}
-
-pre {
-    font-family: "pre", sans-serif;
-}
-
-em {
+* {
+    margin: 0;
+    box-sizing: border-box;
     font-family: "H1", cursive;
 }
+
+.text-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden;
+}
+
+.h2-container {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(10, 123, 2);
+    overflow: hidden;
+}
+.beginnings {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden;
+}
+h3 {
+    font-family: "H1", cursive;
+    font-size: 20px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH1 6000ms linear infinite; 
+}
+.different-font {
+    font-family: "Heavitas", sans-serif;
+    font-size: 20px;
+}
+
 
 
