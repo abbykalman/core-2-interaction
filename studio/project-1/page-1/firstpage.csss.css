@@ -17,7 +17,7 @@ body {
     position: relative;
     height: 300px;
     width: 300px;
-    margin: auto; /* Center the container */
+    margin: auto; 
 }
 
 .circle-text {
@@ -26,7 +26,7 @@ body {
     color: rgb(128, 177, 22);
     text-align: center;
     z-index: 1; 
-    margin-top: 250px;
+    margin-top: 420px;
     font-size: 12px;
 }
 
@@ -38,6 +38,7 @@ body {
     border: 3px dashed rgb(10, 123, 2);
     margin-top: 400px; /* Adjusted margin-top */
     animation: rotate1 3s linear infinite;
+    margin-top: 525px;
 }
 
 .rotating-circle.circle2 {
@@ -48,6 +49,7 @@ body {
     border: 3px dashed rgb(10, 123, 2);
     margin-top: 400px; /* Adjusted margin-top */
     animation: rotate2 5s linear infinite;
+    margin-top: 525px;
 }
 
 @keyframes rotate1 {
@@ -79,4 +81,83 @@ pre {
 
 em {
     font-family: "H1", cursive;
+}
+.rotating-circle.circle3 {
+    width: 400px; /* Adjust the size as needed */
+    height: 500px; /* Adjust the size as needed */
+    border-radius: 50%;
+    position: absolute;
+    border: 3px dashed rgb(10, 123, 2);
+    margin-top: 400px; /* Adjusted margin-top */
+    animation: rotate3 7s linear infinite;
+    margin-top: 525px;
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.rotating-circle {
+    width: 400px;
+    height: 500px;
+    border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px dashed pink; /* Pink outline */
+    animation: rotate2 7s linear infinite;
+    margin-top: 525px;
+}
+.rotating-circle.circle2 {
+    margin-top: 400px;
+    width: 500px; /* Adjust the size as needed */
+    height: 600px; /* Adjust the size as needed */
+    border-radius: 50%;
+    position: absolute;
+    border: 3px dashed rgb(10, 123, 2);
+    animation: rotate2 5s linear infinite;
+    margin-top: 525px;
+}
+
+.rotating-circle.circle3 {
+    margin-top: 400px;
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    border: 3px dotted pink;
+    animation: rotate 7s linear infinite;
+    margin-top: 525px;
+}
+
+.rotating-circle.circle4 {
+    margin-top: 400px;
+    width: 600px;
+    height: 700px;
+    border: 3px dashed rgb(10, 123, 2);
+    animation: rotate 5s linear infinite;
+    margin-top: 525px;
+}
+
+.rotating-circle.circle5 {
+    margin-top: 400px;
+    width: 600px;
+    height: 700px;
+    border: 3px dotted pink;
+    animation: rotate2 7s linear infinite;
+    margin-top: 525px;
+}
+
+.rotating-circle.circle6 {
+    margin-top: 525px;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

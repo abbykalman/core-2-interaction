@@ -223,7 +223,7 @@ p {
 }
 
 .enter-container:hover {
-    border-color: pink; /* Pink border color on hover */
+    border-color: #ffc0cb; /* Pink border color on hover */
 }
 
 .enter-text {
@@ -245,8 +245,11 @@ p {
     color: rgb(10, 123, 2); /* Dark green text color */
     margin: 0;
 }
+.enter-button {
+    cursor: default; /* Set the cursor to the default arrow */
+    text-decoration: none; /* Remove the default underline */
+}
 
-/* Media query for phones and smaller screens */
 @media (max-width: 767px) {
     h1 {
         font-size: 90px;
