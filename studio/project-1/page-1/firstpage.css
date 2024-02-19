@@ -2,6 +2,7 @@ body {
     background-color: rgb(255, 255, 255);
     color: white;
     margin: 0;
+    overflow: hidden;
 }
 
 .content {
@@ -26,7 +27,7 @@ body {
     color: rgb(128, 177, 22);
     text-align: center;
     z-index: 1; 
-    margin-top: 420px;
+    margin-top: -10px;
     font-size: 12px;
 }
 
@@ -38,7 +39,7 @@ body {
     border: 3px dashed rgb(10, 123, 2);
     margin-top: 400px; /* Adjusted margin-top */
     animation: rotate1 3s linear infinite;
-    margin-top: 525px;
+    margin-top: 70px;
 }
 
 .rotating-circle.circle2 {
@@ -49,7 +50,7 @@ body {
     border: 3px dashed rgb(10, 123, 2);
     margin-top: 400px; /* Adjusted margin-top */
     animation: rotate2 5s linear infinite;
-    margin-top: 525px;
+    margin-top: 70px;
 }
 
 @keyframes rotate1 {
@@ -78,10 +79,6 @@ body {
 pre {
     font-family: "pre", sans-serif;
 }
-
-em {
-    font-family: "H1", cursive;
-}
 .rotating-circle.circle3 {
     width: 400px; /* Adjust the size as needed */
     height: 500px; /* Adjust the size as needed */
@@ -90,7 +87,7 @@ em {
     border: 3px dashed rgb(10, 123, 2);
     margin-top: 400px; /* Adjusted margin-top */
     animation: rotate3 7s linear infinite;
-    margin-top: 525px;
+    margin-top: 70px;
 }
 
 @keyframes rotate3 {
@@ -109,7 +106,7 @@ em {
     position: absolute;
     border: 3px dashed pink; /* Pink outline */
     animation: rotate2 7s linear infinite;
-    margin-top: 525px;
+    margin-top: 70px;
 }
 .rotating-circle.circle2 {
     margin-top: 400px;
@@ -119,7 +116,7 @@ em {
     position: absolute;
     border: 3px dashed rgb(10, 123, 2);
     animation: rotate2 5s linear infinite;
-    margin-top: 525px;
+    margin-top: 70px;
 }
 
 .rotating-circle.circle3 {
@@ -129,7 +126,7 @@ em {
     position: absolute;
     border: 3px dotted pink;
     animation: rotate 7s linear infinite;
-    margin-top: 525px;
+    margin-top: 70px;
 }
 
 .rotating-circle.circle4 {
@@ -138,7 +135,7 @@ em {
     height: 700px;
     border: 3px dashed rgb(10, 123, 2);
     animation: rotate 5s linear infinite;
-    margin-top: 525px;
+    margin-top: 70px;
 }
 
 .rotating-circle.circle5 {
@@ -147,11 +144,11 @@ em {
     height: 700px;
     border: 3px dotted pink;
     animation: rotate2 7s linear infinite;
-    margin-top: 525px;
+    margin-top: 70px;
 }
 
 .rotating-circle.circle6 {
-    margin-top: 525px;
+    margin-top: 70px;
 }
 @keyframes rotate {
     0% {
@@ -160,4 +157,50 @@ em {
     100% {
         transform: rotate(360deg);
     }
+}
+h1 {
+    font-family: "H1", cursive;
+    color: rgb(10, 123, 2)
+}
+@font-face {
+    font-family: "H1";
+    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+}
+.life {
+    font-size: 56px;
+    margin-left: 30px;
+    margin-top: -29px;
+}
+.end {
+    font-size: 56px;
+    position: absolute;
+    bottom: -55px; /* Adjusted position from margin-bottom to bottom */
+    right: 30px; /* Adjusted position from margin-right to right */
+    z-index: 2; /* Set a higher z-index */
+}
+
+.scroll-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Adjusted left position */
+    width: 60px; /* Adjusted width */
+    height: 60px; /* Adjusted height */
+    background-color: white;
+    border: 8px solid pink;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid pink;
+    margin: 4px;
 }

@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 90px;
+    color: rgb(10, 123, 2);
+    font-family: "H1", sans-serif;
+    text-align: center; /* Center the text horizontally */
+    margin-top: 50vh; /* Center the text vertically using vertical height */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+@font-face {
+    font-family: "H1";
+    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+}
+
+.different-type {
+    font-family: "different-type", sans-serif;
+}
+
+@font-face {
+    font-family: "different-type";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+}
+
