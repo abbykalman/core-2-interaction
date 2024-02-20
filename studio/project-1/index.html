@@ -36,10 +36,10 @@
         <h4>SO MANY <span class="different-font-2">endings</span></h4>
     </div>
     <div class="last-line">
-<h5>ENDINGS</h5>
-<h5>ENDINGS</h5>
-<h5>ENDINGS</h5>
-<h5>ENDINGS</h5>
+        <h5>ENDINGS</h5>
+        <h5>ENDINGS</h5>
+        <h5>ENDINGS</h5>
+        <h5>ENDINGS</h5>
     </div>
     <div class="true">
         <h3>so many <span class="different-font">BEGINNINGS</span></h3>
@@ -55,12 +55,24 @@
         <h6>• • •</h6>
         <h6>• • •</h6>
     </div>
+    <div class="arrow-container">
+        <div class="arrow-right"></div>
+    </div>
     <a href="https://abbykalman.github.io/core-2-interaction/studio/project-1/page-1/firstpage.html" class="enter-button" id="enterLink">
         <div class="enter-container">
-            <p1 class="enter-text">ENTER</p1>
+            <p1 class="enter-text">Enter</p1>
         </div>
     </a>
+
+    <script>
+        document.getElementById('enterLink').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.classList.add('scroll-out');
+            setTimeout(function () {
+                window.location.href = this.href;
+            }, 800); // Adjust the duration as needed
+        });
+    </script>
 </body>
 
 </html>
-

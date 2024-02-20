@@ -206,20 +206,20 @@ p {
 
 .enter-container {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 43%; /* Adjusted top position */
+    right: 5%; /* Adjusted right position */
+    transform: translate(0%, 0%); /* Adjusted translation */
     background-color: white;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 170px; /* Adjusted width */
+    height: 170px; /* Adjusted height */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
-    border: 10px solid rgb(10, 123, 2); /* Initial green border color */
+    border: 10px solid rgb(10, 123, 2);
     box-sizing: border-box;
-    transition: border-color 0.3s ease; /* Add a smooth transition effect */
+    transition: border-color 0.3s ease;
 }
 
 .enter-container:hover {
@@ -227,11 +227,11 @@ p {
 }
 
 .enter-text {
-    font-family: "Heavitas", sans-serif;
-    font-size: 30px;
-    color: rgb(10, 123, 2); /* Dark green text color */
+    font-family: "H2", sans-serif;
+    font-size: 25px; /* Slightly bigger font size */
+    color: rgb(10, 123, 2);
     margin: 0;
-    transition: color 0.3s ease; /* Add a smooth transition effect */
+    transition: color 0.3s ease;
 }
 
 .enter-container:hover .enter-text {
@@ -239,16 +239,6 @@ p {
 }
 
 
-.enter-text {
-    font-family: "Heavitas", sans-serif;
-    font-size: 30px;
-    color: rgb(10, 123, 2); /* Dark green text color */
-    margin: 0;
-}
-.enter-button {
-    cursor: default; /* Set the cursor to the default arrow */
-    text-decoration: none; /* Remove the default underline */
-}
 
 @media (max-width: 767px) {
     h1 {

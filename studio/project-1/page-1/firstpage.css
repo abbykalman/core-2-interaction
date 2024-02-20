@@ -2,7 +2,6 @@ body {
     background-color: rgb(255, 255, 255);
     color: white;
     margin: 0;
-    overflow: hidden;
 }
 
 .content {
@@ -18,17 +17,18 @@ body {
     position: relative;
     height: 300px;
     width: 300px;
-    margin: auto; 
+    margin: auto;
 }
 
 .circle-text {
-    margin: 0; 
+    margin: 0;
     font-family: "Heavitas.ttf", sans-serif;
     color: rgb(128, 177, 22);
     text-align: center;
-    z-index: 1; 
-    margin-top: -10px;
+    z-index: 1;
+    margin-top: 50px;
     font-size: 12px;
+    margin-left: -50px
 }
 
 .rotating-circle.circle1 {
@@ -37,18 +37,18 @@ body {
     border-radius: 50%;
     position: absolute;
     border: 3px dashed rgb(10, 123, 2);
-    margin-top: 400px; /* Adjusted margin-top */
+    margin-top: 400px; 
     animation: rotate1 3s linear infinite;
     margin-top: 70px;
 }
 
 .rotating-circle.circle2 {
-    width: 400px; /* Adjust the size as needed */
-    height: 500px; /* Adjust the size as needed */
+    width: 400px;
+    height: 500px;
     border-radius: 50%;
     position: absolute;
     border: 3px dashed rgb(10, 123, 2);
-    margin-top: 400px; /* Adjusted margin-top */
+    margin-top: 400px; 
     animation: rotate2 5s linear infinite;
     margin-top: 70px;
 }
@@ -79,13 +79,14 @@ body {
 pre {
     font-family: "pre", sans-serif;
 }
+
 .rotating-circle.circle3 {
-    width: 400px; /* Adjust the size as needed */
-    height: 500px; /* Adjust the size as needed */
+    width: 400px;
+    height: 500px;
     border-radius: 50%;
     position: absolute;
     border: 3px dashed rgb(10, 123, 2);
-    margin-top: 400px; /* Adjusted margin-top */
+    margin-top: 400px; 
     animation: rotate3 7s linear infinite;
     margin-top: 70px;
 }
@@ -98,6 +99,7 @@ pre {
         transform: rotate(360deg);
     }
 }
+
 .rotating-circle {
     width: 400px;
     height: 500px;
@@ -108,10 +110,11 @@ pre {
     animation: rotate2 7s linear infinite;
     margin-top: 70px;
 }
+
 .rotating-circle.circle2 {
     margin-top: 400px;
-    width: 500px; /* Adjust the size as needed */
-    height: 600px; /* Adjust the size as needed */
+    width: 500px;
+    height: 600px;
     border-radius: 50%;
     position: absolute;
     border: 3px dashed rgb(10, 123, 2);
@@ -150,6 +153,7 @@ pre {
 .rotating-circle.circle6 {
     margin-top: 70px;
 }
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -158,49 +162,110 @@ pre {
         transform: rotate(360deg);
     }
 }
+
 h1 {
     font-family: "H1", cursive;
-    color: rgb(10, 123, 2)
+    color: rgb(10, 123, 2);
 }
+
 @font-face {
     font-family: "H1";
     src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
 }
+
 .life {
     font-size: 56px;
     margin-left: 30px;
     margin-top: -29px;
 }
+
 .end {
     font-size: 56px;
     position: absolute;
-    bottom: -55px; /* Adjusted position from margin-bottom to bottom */
-    right: 30px; /* Adjusted position from margin-right to right */
-    z-index: 2; /* Set a higher z-index */
+    bottom: -55px; 
+    right: 30px; 
+    z-index: 2; 
 }
 
-.scroll-button {
+.next-section-button {
     position: fixed;
     bottom: 30px;
-    left: 30px; /* Adjusted left position */
-    width: 60px; /* Adjusted width */
-    height: 60px; /* Adjusted height */
-    background-color: white;
-    border: 8px solid pink;
+    left: 30px; 
+    width: 70px; 
+    height: 70px;
+    border: 7px solid pink;
     border-radius: 50%;
     cursor: pointer;
+    text-decoration: none;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: transparent; 
+}
+
+.next-section-button:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent; 
+    border-right: 18px solid transparent; 
+    border-top: 25px solid pink; 
+    margin-left: 47px;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+#rotating-container {
+    scroll-margin-top: 70px; 
+}
+.white-page {
+    background-color: white;
+    height: 100vh; 
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.title {
+    font-size: 36px;
+    color: pink;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .rotating-container {
+        height: 200px;
+        width: 200px;
+    }
 
-.arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 30px solid pink;
-    margin: 4px;
+    h1 {
+        font-size: 3rem; /* Adjusted font size for smaller screens */
+    }
+
+    .life {
+        margin-top: 2rem;
+    }
+
+    .end {
+        margin-top: -4rem;
+    }
+
+    .circle-text {
+        margin-top: 30px;
+        font-size: 9px;
+    }
+
+    .rotating-circle.circle1,
+    .rotating-circle.circle2,
+    .rotating-circle.circle3,
+    .rotating-circle.circle4,
+    .rotating-circle.circle5,
+    .rotating-circle.circle6 {
+        width: 30%;
+        height: auto;
+        margin-top: 20px;
+    }
 }
