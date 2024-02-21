@@ -4,11 +4,87 @@ body {
    overflow: hidden;
 }
 
+body {
+    background-color: rgb(128, 177, 22);
+    color: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 140px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-bottom: 60px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    color: rgb(10, 123, 2);
+    font-family: "H1", sans-serif;
+    text-align: left; /* Adjusted text alignment */
+    margin-top: 50px;
+    transform: translateX(-100%) skewX(-10deg); /* Added skew transformation */
+    animation: moveH1 6s ease-in-out infinite alternate;
+}
+
+h1:hover .one-font,
+h1:hover span {
+    color: pink; /* Change color on hover */
+}
+
+@keyframes moveH1 {
+    0% {
+        transform: translateX(-100%) skewX(-10deg);
+    }
+    100% {
+        transform: translateX(0) skewX(0deg);
+    }
+}
+
 @font-face {
     font-family: "H1";
     src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
 }
 
+.different-type {
+    font-family: "different-type", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: "different-type";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+}
+
+.one-font {
+    font-family: "different-type", sans-serif;
+    transition: all 0.3s ease-in-out; /* Added smooth transition */
+}
+
+h2 {
+    font-family: "different-type", sans-serif;
+    text-align: center;
+    width: 900px;
+    margin-left: 230px;
+    font-size: 30px;
+    margin-top: 60px;
+}
+
+.new {
+    font-family: "H1", cursive;
+    font-size: 60px;
+}
+
+.intro-title {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden;
+}
 h1 {
     font-family: "H1", cursive;
     font-size: 135px;
