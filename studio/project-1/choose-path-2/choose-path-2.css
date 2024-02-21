@@ -35,8 +35,11 @@ h1 {
     font-family: "different-type";
     src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
 }
-.one-font {
+.font {
     font-family: "different-type", sans-serif;
+}
+.one-font {
+    font-family: "H1", cursive;
     transition: all 0.3s ease-in-out; /* Added smooth transition */
 }
 .intro-title-phase-1 {
@@ -46,28 +49,22 @@ h1 {
     overflow: hidden;
 }
 h2 {
-    font-size: 135px;
-    white-space: nowrap;
+    font-family: "different-type", sans-serif;
     color: transparent;
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: rgb(128, 177, 22);
     -webkit-text-fill-color: rgb(128, 177, 22);
-    margin-bottom: 60px;
-    white-space: nowrap;
-    padding: 0 6rem;
-    letter-spacing: 1px;
-    color: rgb(10, 123, 2);
-    font-family: "H1", sans-serif;
-    text-align: left; /* Adjusted text alignment */
+    text-align: center;
+    font-size: 38px;
     margin-top: 50px;
-    transform: translateX(-100%) skewX(-10deg); /* Added skew transformation */
+    margin-bottom: 50px;
+    white-space: nowrap;
+    padding: 0 1rem;
+    letter-spacing: 1px;
     animation: moveH2 6s ease-in-out infinite alternate;
 }
-.phase-2 {
-    display: flex;
-    justify-content: flex-start;
-    overflow: hidden;
-}
+
+
 @keyframes moveH2 {
     0% {
         transform: translateX(-100%) skewX(-10deg);
@@ -80,7 +77,38 @@ h3 {
     font-family: "different-type", sans-serif;
     text-align: center;
     width: 900px;
-    margin-left: 270px;
+    margin-left: 282px;
     font-size: 30px;
     margin-top: 60px;
+}
+.phase-2 {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: rgb(10, 123, 2);
+}
+.pink-arrow-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Adjusted left position to match the desired location */
+    width: 70px;
+    height: 70px;
+    border: 7px solid pink;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    z-index: 2;
+    transition: bottom 1s ease-in-out; /* Added transition for button movement */
+}
+
+.pink-arrow-button .arrow-container {
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 25px solid pink;
 }

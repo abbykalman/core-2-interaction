@@ -1,0 +1,374 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+   overflow: hidden;
+   transition: background-color 0.8s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+body {
+    background-color: rgb(128, 177, 22);
+    color: white;
+    margin: 0;
+    overflow: hidden;
+}
+.three-font {
+    font-size: 50px;
+    font-family: "different-type", sans-serif;
+}
+h1 {
+    font-size: 140px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-bottom: 60px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    color: rgb(10, 123, 2);
+    font-family: "H1", sans-serif;
+    text-align: left; /* Adjusted text alignment */
+    margin-top: 50px;
+    transform: translateX(-100%) skewX(-10deg); /* Added skew transformation */
+    animation: moveH1 6s ease-in-out infinite alternate;
+}
+
+h1:hover .one-font,
+h1:hover span {
+    color: pink; /* Change color on hover */
+}
+
+@keyframes moveH1 {
+    0% {
+        transform: translateX(-100%) skewX(-10deg);
+    }
+    100% {
+        transform: translateX(0) skewX(0deg);
+    }
+}
+
+@font-face {
+    font-family: "H1";
+    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+}
+
+.different-type {
+    font-family: "different-type", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: "different-type";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+}
+
+.one-font {
+    font-family: "different-type", sans-serif;
+    transition: all 0.3s ease-in-out; /* Added smooth transition */
+}
+
+h2 {
+    font-family: "H2", sans-serif;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(128, 177, 22);
+    -webkit-text-fill-color: rgb(128, 177, 22);
+    text-align: center;
+    font-size: 38px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    white-space: nowrap;
+    padding: 0 1rem;
+    letter-spacing: 1px;
+    animation: moveH22 3s linear infinite;
+}
+@keyframes moveH22 {
+    100% {
+        transform: translateX(0);
+    }
+    0% {
+        transform: translateX(-100%);
+    }
+}
+.new {
+    font-family: "H1", cursive;
+    font-size: 60px;
+}
+
+.intro-title {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden;
+}
+h1 {
+    font-family: "H1", cursive;
+    font-size: 135px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-top: 50px;
+    margin-bottom: 60px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH1 6000ms linear infinite;
+}
+
+@keyframes moveH1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@font-face {
+    font-family: "H2";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+}
+
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "H1", cursive;
+}
+
+.intro-title-phase-1 {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden;
+}
+
+.h2-container {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(10, 123, 2);
+    overflow: hidden;
+}
+.beginnings {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden;
+}
+h3 {
+    font-family: "H2", sans-serif;
+    font-size: 90px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(128, 177, 22);
+    -webkit-text-fill-color: rgb(128, 177, 22);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH2 3600ms linear infinite; 
+}
+@keyframes moveH2 {
+    100% {
+        transform: translateX(0);
+    }
+    0% {
+        transform: translateX(-100%);
+    }
+}
+.different-font {
+    font-family: "Heavitas", sans-serif;
+    font-size: 20px;
+}
+.different-font-2 {
+    font-family: "H1", cursive;
+    font-size: 50px; 
+}
+h4 {
+    font-family: "H2", sans-serif;
+    font-size: 15px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-top: 17px;
+    margin-bottom: 17px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH2 3600ms linear infinite; 
+}
+.endings {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(10, 123, 2);
+    overflow: hidden;
+}
+.last-line {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden;
+}
+h5 {
+    font-family: "H1", cursive;
+    font-size: 60px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(128, 177, 22);
+    -webkit-text-fill-color: rgb(128, 177, 22);
+    margin-top: 14px;
+    margin-bottom: 9px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH1 3700ms linear infinite; 
+}
+h6 {
+    font-family: "H2", sans-serif;
+    font-size: 40px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-top: 15px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH1 2800ms linear infinite; 
+}
+.dot-dot-dot {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(128, 177, 22);
+    overflow: hidden; 
+}
+.phase-4 {
+    display: flex;
+    justify-content: flex-start;
+    background: rgb(10, 123, 2);
+    overflow: hidden; 
+}
+.four-font {
+    font-family: "H1", cursive;
+}
+p {
+    font-family: "H2", sans-serif;
+    font-size: 60px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(10, 123, 2);
+    -webkit-text-fill-color: rgb(10, 123, 2);
+    margin-top: 7px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: moveH1 2800ms linear infinite; 
+}
+.enter-container {
+    position: fixed;
+    top: 43%; /* Adjusted top position */
+    right: 5%; /* Adjusted right position */
+    transform: translate(0%, 0%); /* Adjusted translation */
+    background-color: white;
+    border-radius: 50%;
+    width: 170px; /* Adjusted width */
+    height: 170px; /* Adjusted height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    border: 10px solid rgb(10, 123, 2);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.enter-container:hover {
+    border-color: #ffc0cb; /* Pink border color on hover */
+}
+
+.enter-container .arrow-container {
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 25px solid rgb(10, 123, 2);
+    transform: rotate(-90deg); /* Rotate the arrow to point right */
+}
+
+.enter-container:hover .arrow-container {
+    border-top-color: pink; /* Change arrow color on hover */
+}
+
+.enter-text {
+    display: none; /* Hide text */
+}
+
+body.slide-out {
+    overflow: hidden; /* Hide overflow during the transition */
+    animation: slideOut 0.8s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 20px)); /* Adjusted to leave a bit of space on the left */
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 90px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 70px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    h5 {
+        font-size: 50px;
+    }
+
+    h6 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 50px;
+    }
+
+    .enter-container {
+        width: 150px;
+        height: 150px;
+        border-width: 6px;
+    }
+
+    .enter-text {
+        font-size: 16px;
+    }
+}
