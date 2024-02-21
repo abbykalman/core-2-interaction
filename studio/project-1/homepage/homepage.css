@@ -2,6 +2,7 @@ body {
     background-color: rgb(255, 255, 255);
     color: white;
    overflow: hidden;
+   transition: background-color 0.8s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 body {
@@ -312,6 +313,20 @@ p {
 
 .enter-container:hover .enter-text {
     color: pink; /* Pink color for "ENTER" text on hover */
+}
+
+body.slide-out {
+    overflow: hidden; /* Hide overflow during the transition */
+    animation: slideOut 0.8s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 20px)); /* Adjusted to leave a bit of space on the left */
+    }
 }
 
 

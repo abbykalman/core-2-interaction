@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
     <link rel="stylesheet" href="homepage.css" />
-    <link href="https://cdn.glitch.global/2f995378-463c-4d2f-97cc-e4cf60f0ff4d/Birds%20of%20Paradise%20%E2%88%8F%20PERSONAL%20USE%20ONLY.ttf?v=1708009648791">
-    <link href="https://cdn.glitch.global/2f995378-463c-4d2f-97cc-e4cf60f0ff4d/Heavitas.ttf?v=1708009348759">
+    <link rel="stylesheet" href="https://cdn.glitch.global/2f995378-463c-4d2f-97cc-e4cf60f0ff4d/Birds%20of%20Paradise%20%E2%88%8F%20PERSONAL%20USE%20ONLY.ttf?v=1708009648791">
+    <link rel="stylesheet" href="https://cdn.glitch.global/2f995378-463c-4d2f-97cc-e4cf60f0ff4d/Heavitas.ttf?v=1708009348759">
 </head>
 
 <body>
@@ -58,19 +58,48 @@
     <div class="arrow-container">
         <div class="arrow-right"></div>
     </div>
-    <a href="https://abbykalman.github.io/core-2-interaction/studio/project-1/page-1/firstpage.html" class="enter-button" id="enterLink">
+    <a href="#" class="enter-button" id="enterLink">
         <div class="enter-container">
             <p1 class="enter-text">Enter</p1>
         </div>
     </a>
-
     <script>
-        document.getElementById('enterLink').addEventListener('click', function (e) {
+        // Function to handle enter button click
+        function handleEnterClick(e) {
             e.preventDefault();
-            document.body.classList.add('scroll-out');
+
+            // Prevent button movement
+            document.getElementById('enterLink').style.pointerEvents = 'none';
+
+            // Add slide-out class for transition
+            document.body.classList.add('slide-out');
+
+            // Redirect to the next page after a delay
             setTimeout(function () {
-                window.location.href = this.href;
+                window.location.href = "https://abbykalman.github.io/core-2-interaction/studio/project-1/choose-path-1/choose-path-1.html";
             }, 800); // Adjust the duration as needed
+        }
+
+        // Event listener for enter button click
+        document.getElementById('enterLink').addEventListener('click', handleEnterClick);
+
+        // Event listener for the end of the transition
+        document.body.addEventListener('animationend', function () {
+            // Remove the slide-out class to allow scrolling
+            document.body.classList.remove('slide-out');
+
+            // Allow button clicks again
+            document.getElementById('enterLink').style.pointerEvents = 'auto';
+
+            // Remove the event listener to prevent multiple clicks during transition
+            document.getElementById('enterLink').removeEventListener('click', handleEnterClick);
+
+            // Scroll to the next section
+            document.getElementById('next-section').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.remove('preload');
         });
     </script>
 </body>
