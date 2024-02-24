@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Page</title>
+    <link rel="stylesheet" type="text/css" href="fire.css">
+
+</head>
+<body>
+    <div class="life">
+        <h1>In Life,</h1>
+    </div>
+    <div class="end">
+        <h1>End It.</h1>
+    </div>
+    <div id="rotating-container" class="rotating-container">
+        <div class="rotating-circle circle1"></div>
+        <div class="circle-text">
+            <pre>
+                The number of beginnings is exactly 
+                equal to the number of endings: no one 
+                has yet to begin a life who will...
+              </pre>
+            </div>
+            <div class="rotating-circle circle2"></div>
+            <div class="rotating-circle circle3"></div>
+            <div class="rotating-circle circle4"></div>
+            <div class="rotating-circle circle5"></div>
+            <div class="rotating-circle circle6"></div>
+        </div>
+        <div class="scroll-text">
+            <p>Your scrolling text goes here.</p>
+        </div>
+        <a href="#" class="next-section-button" id="nextBtn">Next Section</a>
+    
+        <!-- Section 1 -->
+        <div id="next-section1" class="white-page">
+            <p class="title"></p>
+            <p class="second"> <p class="title">
+              <span class="yes">In Poetry,</span> the number of beginnings so far exceeds the number of endings that we cannot even conceive of it. Not every poem is finished—one poem is <span class="abandonment">abandoned,</span> another catches <span class="fire">fire</span> and is <span class="wind"> carried away by the wind</span>, which may be an ending,<span class="last-sentence"> but it is the ending of a poem without an <span class="yes">End.</span> </span>
+          </p></p>
+            <p class="third"></p>
+        </div>
+    
+        <!-- Section 2 -->
+        <div id="next-section2" class="white-page">
+            <p class="title"></p>
+            <p class="second">  <span class="yes">Paul Valéry,</span> the French poet and thinker, once said that <span class="last-sentence">no poem is ever ended,</span> that every poem is merely <span class="abandonment">abandoned.</span> This saying is also attributed to Stéphane Mallarmé, for where <span class="up">quotations begin is in a</span><span class="yes-cloud">Cloud.</span> </p>
+            <p class="third"></p>
+        </div>
+    
+        <!-- Section 3 -->
+        <div id="next-section3" class="white-page">
+            <p class="title"></p>
+            <p class="third"> <span class="yes">Paul Valéry</span> also described his perception of first lines so vividly, and to my mind so <span class="accurate">accurately,</span> that I have never forgotten it: the opening line of a poem, he said, is like finding a fruit on the ground, a piece of fallen fruit you have never seen before, and the poet’s task is to create the tree from which such a fruit would <span class="yes">Fall.</span> </p>
+            <p class="fruit"></p>
+        </div>
+    
+        <script>
+ document.addEventListener("DOMContentLoaded", function () {
+    var nextBtn = document.getElementById('nextBtn');
+    var sectionIndex = 1;
+    var isScrolling = false;
+
+    nextBtn.addEventListener('click', function () {
+        if (!isScrolling) {
+            navigateToNextSection();
+        }
+    });
+
+    function navigateToNextSection() {
+        var currentSectionId = 'next-section' + sectionIndex;
+        var currentSection = document.getElementById(currentSectionId);
+
+        if (currentSection) {
+            isScrolling = true;
+            disableButton();
+
+            setTimeout(function () {
+                currentSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                enableButton();
+                isScrolling = false;
+                sectionIndex++;
+
+                if (sectionIndex > 3) {
+                    sectionIndex = 1;
+                }
+            }, 100); // Adjust the timeout as needed
+        }
+    }
+
+    function disableButton() {
+        nextBtn.style.pointerEvents = 'none';
+    }
+
+    function enableButton() {
+        nextBtn.style.pointerEvents = 'auto';
+    }
+});
+
+        </script>
+    </body>
+    </html>
+    

@@ -1,11 +1,4 @@
 body {
-    background-color: rgb(255, 255, 255);
-    color: white;
-   overflow: hidden;
-   transition: background-color 0.8s cubic-bezier(0.42, 0, 0.58, 1);
-}
-
-body {
     background-color: rgb(128, 177, 22);
     color: white;
     margin: 0;
@@ -148,13 +141,13 @@ h1 {
     overflow: hidden;
 }
 
-.h2-container {
+.h2-container-2 {
     display: flex;
     justify-content: flex-start;
     background: rgb(10, 123, 2);
     overflow: hidden;
 }
-.beginnings {
+.beginnings-2 {
     display: flex;
     justify-content: flex-start;
     background: rgb(128, 177, 22);
@@ -206,7 +199,7 @@ h4 {
     letter-spacing: 1px;
     animation: moveH2 3600ms linear infinite; 
 }
-.endings {
+.endings-2 {
     display: flex;
     justify-content: flex-start;
     background: rgb(10, 123, 2);
@@ -248,7 +241,7 @@ h6 {
     letter-spacing: 1px;
     animation: moveH1 2800ms linear infinite; 
 }
-.dot-dot-dot {
+.dot-dot-dot-1 {
     display: flex;
     justify-content: flex-start;
     background: rgb(128, 177, 22);
@@ -315,20 +308,6 @@ p {
 
 .enter-text {
     display: none; /* Hide text */
-}
-
-body.slide-out {
-    overflow: hidden; /* Hide overflow during the transition */
-    animation: slideOut 0.8s cubic-bezier(0.42, 0, 0.58, 1);
-}
-
-@keyframes slideOut {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-100% - 20px)); /* Adjusted to leave a bit of space on the left */
-    }
 }
 
 

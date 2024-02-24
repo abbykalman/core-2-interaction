@@ -1,0 +1,139 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "H2";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+}
+
+@font-face {
+    font-family: "H1";
+    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+}
+
+h1 {
+    font-family: "H1", cursive;
+    color: rgb(10, 123, 2);
+}
+
+h2 {
+    font-family: "H2", sans-serif;
+    margin-top: -50px;
+    color: rgb(128, 177, 22);
+    font-size: 56px;
+    margin-right: -40px;
+}
+
+h3 {
+    font-family: "H1", cursive;
+    color: rgb(10, 123, 2);
+    font-size: 110px;
+    margin-top: -60px;
+    margin-left: 930px;
+}
+
+.intro {
+    font-size: 110px;
+    white-space: nowrap;
+    margin-right: 750px;
+    margin-top: 40px;
+}
+
+.top-title {
+    text-align: center;
+    display: nowrap;
+}
+
+h4 {
+    color: rgb(128, 177, 22);
+    font-family: "H2", sans-serif;
+    text-align: center;
+    margin-top: 440px;
+    font-size: 20px;
+}
+
+.rotating-ellipse {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.ellipse1 {
+    border: 3px dotted pink;
+    animation: stretch1 7s linear infinite;
+    transform: perspective(800px) rotateX(45deg);
+    top: 50%;
+    left: 50%;
+    width: 260px;
+    height: 550px;
+    margin-top: -280px;
+    margin-left: -139px;
+}
+@keyframes stretch1 {
+    0% {
+        transform: perspective(800px) rotateX(45deg) scale(1);
+        border: 3px dotted pink;
+    }
+    50% {
+        transform: perspective(800px) rotateX(45deg) scale(1.2);
+        border: 3px dotted pink; /* Customize as needed */
+    }
+    100% {
+        transform: perspective(800px) rotateX(45deg) scale(1);
+        border: 3px dotted pink;
+    }
+}
+
+.ellipse2 {
+    border: 3px dashed green;
+    animation: stretch2 6s linear infinite;
+    transform: perspective(900px) rotateX(45deg);
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 660px;
+    margin-top: -395px;
+    margin-left: -590px;
+}
+
+@keyframes stretch2 {
+    0% {
+        transform: perspective(900px) rotateX(45deg) scale(1);
+    }
+    50% {
+        transform: perspective(900px) rotateX(45deg) scale(1.2);
+    }
+    100% {
+        transform: perspective(900px) rotateX(45deg) scale(1);
+    }
+}
+
+.ellipse3 {
+    border: 3px dotted green;
+    animation: stretch3 8s linear infinite;
+    transform: perspective(700px) rotateX(45deg);
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 400px;
+    margin-top: -120px;
+    margin-left: 340px;
+}
+@keyframes stretch3 {
+    0% {
+        transform: perspective(700px) rotateX(45deg) scale(1);
+        border: 3px dashed green;
+    }
+    50% {
+        transform: perspective(700px) rotateX(45deg) scale(1.2);
+        border: 3px dashed green; /* Customize as needed */
+    }
+    100% {
+        transform: perspective(700px) rotateX(45deg) scale(1);
+        border: 3px dashed green;
+    }
+}
+
+
