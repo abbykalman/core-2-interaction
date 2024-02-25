@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Page</title>
+    <link rel="stylesheet" href="page-4.css" />
+</head>
+<body>
+    <div class="life">
+        <h1>In Life,</h1>
+    </div>
+    <div class="end">
+        <h1>End It.</h1>
+    </div>
+    <div id="rotating-container" class="rotating-container">
+        <div class="rotating-circle circle1"></div>
+        <div class="circle-text">
+            <pre>
+                The number of beginnings is exactly 
+                equal to the number of endings: no one 
+                has yet to begin a life who will...
+            </pre>
+        </div>
+        <div class="rotating-circle circle2"></div>
+        <div class="rotating-circle circle3"></div>
+        <div class="rotating-circle circle4"></div>
+        <div class="rotating-circle circle5"></div>
+        <div class="rotating-circle circle6"></div>
+    </div>
+    <div class="scroll-text">
+        <p>Your scrolling text goes here.</p>
+    </div>
+    <a href="#next-section" class="next-section-button">Next Section</a>
+    <a href="#second-section" class="second-section-button">Second Section</a>
+    <a href="#third-section" class="third-section-button">Third Section</a>
+    <div id="next-section" class="white-page scroll-section">
+        <p class="title">
+            In poetry, the number of <span class="yes">beginnings</span> so far exceeds the number of endings that we cannot even conceive of it. Not every poem is finished—one poem is <span class="abandonment">abandoned,</span> another catches <span class="fire">fire</span> and is<span class="wind">carried away by the wind</span>, which may be an ending,<span class="last-sentence"> but it is the ending of a poem without an <span class="yes">end.</span> </span>
+        </p>
+    </div>
+
+    <div id="second-section" class="second-section-2 scroll-section hidden">
+        <p class="second content">
+            Paul Valéry, the French poet and thinker, once said that no poem is ever ended, that every poem is merely abandoned. This saying is also attributed to Stéphane Mallarmé, for where quotations begin is in a cloud. 
+        </p>
+    </div>
+
+    <div id="third-section" class="third-section-2 scroll-section hidden">
+        <p class="third">
+            Paul Valéry also described his perception of first lines so vividly, and to my mind so accurately, that I have never forgotten it: the opening line of a poem, he said, is like finding a fruit on the ground, a piece of fallen fruit you have never seen before, and the poet’s task is to create the tree from which such a fruit would fall. 
+        </p>
+    </div>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll('.scroll-section');
+    let currentSection = 0;
+
+    function scrollToSection(event, sectionIndex) {
+        event.preventDefault();
+        if (sectionIndex >= 0 && sectionIndex < sections.length) {
+            currentSection = sectionIndex;
+            sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    const nextSectionButton = document.querySelector('.next-section-button');
+    nextSectionButton.addEventListener('click', (event) => scrollToSection(event, currentSection + 1));
+
+    const secondSectionButton = document.querySelector('.second-section-button');
+    secondSectionButton.addEventListener('click', (event) => scrollToSection(event, 1));
+
+    const thirdSectionButton = document.querySelector('.third-section-button');
+    thirdSectionButton.addEventListener('click', (event) => scrollToSection(event, 2));
+});
+    </script>
+
+</body>
+</html>
+

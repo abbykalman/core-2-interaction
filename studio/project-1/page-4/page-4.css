@@ -1,0 +1,408 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    margin: 0;
+}
+.hidden {
+    display: none;
+}
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.rotating-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+}
+
+.circle-text {
+    margin: 0;
+    font-family: "Heavitas.ttf", sans-serif;
+    color: rgb(128, 177, 22);
+    text-align: center;
+    z-index: 1;
+    margin-top: 50px;
+    font-size: 12px;
+    margin-left: -50px;
+}
+
+.rotating-circle.circle1 {
+    width: 400px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px dashed rgb(10, 123, 2);
+    margin-top: 400px; 
+    animation: rotate1 3s linear infinite;
+    margin-top: 70px;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@font-face {
+    font-family: "pre";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+}
+
+pre {
+    font-family: "pre", sans-serif;
+}
+
+.rotating-circle.circle3 {
+    width: 400px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px dashed rgb(10, 123, 2);
+    margin-top: 70px;
+    animation: rotate3 7s linear infinite;
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.rotating-circle {
+    width: 400px;
+    height: 500px;
+    border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px dashed pink; /* Pink outline */
+    animation: rotate2 7s linear infinite;
+    margin-top: 70px;
+}
+
+.rotating-circle.circle2 {
+    margin-top: 70px;  /* Adjust as needed */
+    width: 500px;
+    height: 600px;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px dashed rgb(10, 123, 2);
+    animation: rotate2 5s linear infinite;
+}
+
+
+
+.rotating-circle.circle4 {
+    margin-top: 400px;
+    width: 600px;
+    height: 700px;
+    border: 3px dashed rgb(10, 123, 2);
+    animation: rotate 5s linear infinite;
+    margin-top: 70px;
+}
+
+.rotating-circle.circle5 {
+    margin-top: 400px;
+    width: 600px;
+    height: 700px;
+    border: 3px dotted pink;
+    animation: rotate2 7s linear infinite;
+    margin-top: 70px;
+}
+
+.rotating-circle.circle6 {
+    margin-top: 70px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    font-family: "H1", cursive;
+    color: rgb(10, 123, 2);
+}
+
+@font-face {
+    font-family: "H1";
+    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+}
+
+.life {
+    font-size: 56px;
+    margin-left: 30px;
+    margin-top: -29px;
+}
+
+.end {
+    font-size: 56px;
+    position: absolute;
+    bottom: -55px;
+    right: 30px;
+    z-index: 2;
+}
+
+.next-section-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; 
+    width: 70px; 
+    height: 70px;
+    border: 7px solid pink;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent; 
+}
+
+.next-section-button:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent; 
+    border-right: 18px solid transparent; 
+    border-top: 25px solid pink; 
+    margin-left: 47px;
+}
+.second-section-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; 
+    width: 70px; 
+    height: 70px;
+    border: 7px solid pink;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent; 
+}
+.second-section-button:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent; 
+    border-right: 18px solid transparent; 
+    border-top: 25px solid pink; 
+    margin-left: 47px;
+}
+.third-section-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; 
+    width: 70px; 
+    height: 70px;
+    border: 7px solid pink;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent; 
+}
+.third-section-button:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent; 
+    border-right: 18px solid transparent; 
+    border-top: 25px solid pink; 
+    margin-left: 47px;
+}
+html {
+    scroll-behavior: smooth;
+}
+.scroll-section {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+#rotating-container {
+    scroll-margin-top: 90px; 
+}
+.abandonment {
+    color: #df767b; /* A subdued color for a faded effect */
+    animation: abandonmentAnimation 2s linear infinite alternate;
+}
+
+@keyframes abandonmentAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(-10px);
+    }
+}
+
+.white-page {
+    background-color: white;
+    height: 10vh;
+    margin-top: 0; /* Adjusted margin-top */
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+}
+.second-section-2 {
+    background-color: white;
+    height: 10vh;
+    margin-top: 60vh;  /* Adjusted margin to start with the first paragraph */
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+}
+.third-section-2 {
+    background-color: white;
+    height: 10vh;
+    margin-top: 60vh;  /* Adjusted margin to start with the first paragraph */
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+}
+.title.arrow-clicked {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.yes {
+    font-family: "H1", cursive;
+    color: green;
+    font-size: 40px;
+}
+
+.title {
+    font-size: 40px;
+    color: pink;
+    text-align: center;
+    font-family: "Heavitas", sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 90%; /* Adjust the percentage as needed */
+    transform: translate(-50%, 15%);
+
+}
+
+.second {
+    font-size: 30px;
+    color: pink;
+    text-align: center;
+    font-family: "Heavitas", sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    top: 100%; /* Adjust the percentage as needed */
+}
+.arrow-clicked + #next-section .content {
+    opacity: 1;
+}
+
+.arrow-clicked {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
+
+
+.third {
+    font-size: 30px;
+    color: pink;
+    text-align: right;
+    font-family: "Heavitas", sans-serif;
+    position: absolute;
+    top: 80vh;
+    left: 70vw;
+}
+
+.fire:hover {
+    filter: drop-shadow(0 0 10px orange);
+    transition: filter 0.3s ease-in-out;
+}
+
+.wind {
+    position: relative;
+    display: inline-block;
+}
+
+.last-sentence {
+    background: linear-gradient(to right, rgba(244, 243, 243, 0) 0%, white 100%);
+    transition: background 0.5s ease;
+    animation: pulsate 3s infinite alternate;
+}
+
+
+
+@keyframes pulsate {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 10%; 
+    }
+}
+
+.wind::after {
+    content: "wind";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    transition: background 0.5s ease;
+    animation: windAnimation 5s linear infinite;
+}
+
+@keyframes windAnimation {
+    0%, 100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

@@ -159,11 +159,11 @@ h4 {
   }
   .third {
     color: pink;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     font-family: "Heavitas", sans-serif;
     position: absolute;
-    width: 1000px;
+    width: 3000px;
   }
   #next-section3 {
     position: relative;
@@ -175,7 +175,7 @@ h4 {
   
   #next-section3 .enter-container {
     position: absolute;
-    bottom: 10%;
+    bottom: 1%;
     right: 5%; /* Adjust this value to move the button to the right */
     background-color: white;
     border-radius: 50%;
