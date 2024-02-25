@@ -8,9 +8,15 @@ body.transitioning {
   background-color: rgb(128, 177, 22);
 }
 
-body.slide-out .end {
-  color: rgb(10, 123, 2);
+body.green-background {
+  background-color: rgb(128, 177, 22) !important;
+  transition: background-color 0.8s ease-out !important;
 }
+
+body.slide-out {
+  animation: none !important; /* Disable the slide-out animation */
+}
+
 .content {
   text-align: center;
   padding: 20px;

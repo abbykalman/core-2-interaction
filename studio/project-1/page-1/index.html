@@ -93,66 +93,65 @@
         </a>
     </div>
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var nextBtn = document.getElementById('nextBtn');
-    var enterLink3 = document.getElementById('enterLink3');
-    var sectionIndex = 1;
-    var isScrolling = false;
+        document.addEventListener("DOMContentLoaded", function () {
+            var nextBtn = document.getElementById('nextBtn');
+            var enterLink3 = document.getElementById('enterLink3');
+            var sectionIndex = 1;
+            var isScrolling = false;
 
-    nextBtn.addEventListener('click', function () {
-        if (!isScrolling) {
-            navigateToNextSection();
-        }
-    });
-
-    enterLink3.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.body.classList.add('transitioning', 'slide-out');
-
-        setTimeout(function () {
-            window.location.href = "https://abbykalman.github.io/core-2-interaction/studio/project-1/choose-path-2/index.html";
-        }, 800); // Adjust the timeout as needed
-    });
-
-    function navigateToNextSection() {
-        var currentSectionId = 'next-section' + sectionIndex;
-        var currentSection = document.getElementById(currentSectionId);
-
-        if (currentSection) {
-            isScrolling = true;
-            disableButton();
-
-            setTimeout(function () {
-                if (sectionIndex === 3) {
-                    document.body.classList.add('green-background');
+            nextBtn.addEventListener('click', function () {
+                if (!isScrolling) {
+                    navigateToNextSection();
                 }
+            });
 
-                currentSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            enterLink3.addEventListener('click', function (e) {
+                e.preventDefault();
 
-                enableButton();
-                isScrolling = false;
-                sectionIndex++;
+                document.body.classList.add('transitioning', 'slide-out');
 
-                if (sectionIndex > 3) {
-                    sectionIndex = 1;
+                setTimeout(function () {
+                    window.location.href = "https://abbykalman.github.io/core-2-interaction/studio/project-1/choose-path-2/index.html";
+                }, 800); // Adjust the timeout as needed
+            });
+
+            function navigateToNextSection() {
+                var currentSectionId = 'next-section' + sectionIndex;
+                var currentSection = document.getElementById(currentSectionId);
+
+                if (currentSection) {
+                    isScrolling = true;
+                    disableButton();
+
+                    setTimeout(function () {
+                        if (sectionIndex === 3) {
+                            document.body.classList.add('green-background');
+                        }
+
+                        currentSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        enableButton();
+                        isScrolling = false;
+                        sectionIndex++;
+
+                        if (sectionIndex > 3) {
+                            sectionIndex = 1;
+                        }
+                    }, 100);
                 }
-            }, 100);
-        }
-    }
+            }
 
-    function disableButton() {
-        nextBtn.style.pointerEvents = 'none';
-    }
+            function disableButton() {
+                nextBtn.style.pointerEvents = 'none';
+            }
 
-    function enableButton() {
-        nextBtn.style.pointerEvents = 'auto';
-    }
-});
-
-    </script> 
+            function enableButton() {
+                nextBtn.style.pointerEvents = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>
