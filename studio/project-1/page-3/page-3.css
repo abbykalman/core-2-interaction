@@ -40,13 +40,12 @@ h2 {
     color: rgb(128, 177, 22);
     font-size: 56px;
 }
-
 h3 {
     font-family: "H1", cursive;
-    color: rgb(10, 123, 2);
-    font-size: 110px;
-    margin-top: -60px;
-    margin-left: 930px;
+    color: rgb(128, 177, 22);
+    font-size: 700px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .intro {
