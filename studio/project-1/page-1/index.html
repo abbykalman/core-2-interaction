@@ -7,7 +7,20 @@
     <title>First Page</title>
     <link rel="stylesheet" type="text/css" href="fire.css">
 </head>
+<style>
+    body.slide-out {
+        animation: slideOut 0.8s ease-out;
+    }
 
+    @keyframes slideOut {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
 <body>
     <div class="life">
         <h1>In Life,</h1>
@@ -22,7 +35,7 @@
                 The number of beginnings is exactly 
                 equal to the number of endings: no one 
                 has yet to begin a life who will...
-              </pre>
+            </pre>
         </div>
         <div class="rotating-circle circle2"></div>
         <div class="rotating-circle circle3"></div>
@@ -30,9 +43,7 @@
         <div class="rotating-circle circle5"></div>
         <div class="rotating-circle circle6"></div>
     </div>
-    <div class="scroll-text">
-        <p>Your scrolling text goes here.</p>
-    </div>
+    
     <a href="#" class="next-section-button" id="nextBtn">Next Section</a>
 
     <!-- Section 1 -->
@@ -57,71 +68,91 @@
         </p>
         <p class="third"></p>
     </div>
-<!-- Section 3 -->
-<div id="next-section3" class="white-page">
-    <p class="title"></p>
-    <p class="third">
-        <span class="yes">Paul Valéry</span> also described his perception of first lines so vividly, and to my mind so
-        <span class="accurate">accurately,</span> that I have never forgotten it: the opening line of a poem, he said, is like finding a
-        <span class="fruit-container hover-trigger">
-            <span class="fruit"></span>
-            fruit
-        </span>
-        on the ground, a piece of fallen fruit you have never seen before, and the poet’s
-        task is to create the tree from which such a
-        <span class="hover-trigger">fruit</span> would
-        <span class="yes">Fall.</span>
-    </p>
-</div>
 
+    <!-- Section 3 -->
+    <div id="next-section3" class="white-page">
+        <p class="title"></p>
+        <p class="third">
+            <span class="yes">Paul Valéry</span> also described his perception of first lines so vividly, and to my mind so
+            <span class="accurate">accurately,</span> that I have never forgotten it: the opening line of a poem, he said, is like finding a
+            <span class="fruit-container hover-trigger">
+                <span class="fruit"></span>
+                fruit
+            </span>
+            on the ground, a piece of fallen fruit you have never seen before, and the poet’s
+            task is to create the tree from which such a
+            <span class="hover-trigger">fruit</span> would
+            <span class="yes">Fall.</span>
+        </p>
 
-
+        <!-- Enter button code here -->
+        <a href="#" class="enter-button" id="enterLink3">
+            <div class="enter-container">
+                <div class="arrow-container"></div>
+            </div>
+        </a>
+    </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var nextBtn = document.getElementById('nextBtn');
-            var sectionIndex = 1;
-            var isScrolling = false;
+  document.addEventListener("DOMContentLoaded", function () {
+    var nextBtn = document.getElementById('nextBtn');
+    var enterLink3 = document.getElementById('enterLink3');
+    var sectionIndex = 1;
+    var isScrolling = false;
 
-            nextBtn.addEventListener('click', function () {
-                if (!isScrolling) {
-                    navigateToNextSection();
+    nextBtn.addEventListener('click', function () {
+        if (!isScrolling) {
+            navigateToNextSection();
+        }
+    });
+
+    enterLink3.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.body.classList.add('transitioning', 'slide-out');
+
+        setTimeout(function () {
+            window.location.href = "https://abbykalman.github.io/core-2-interaction/studio/project-1/choose-path-2/index.html";
+        }, 800); // Adjust the timeout as needed
+    });
+
+    function navigateToNextSection() {
+        var currentSectionId = 'next-section' + sectionIndex;
+        var currentSection = document.getElementById(currentSectionId);
+
+        if (currentSection) {
+            isScrolling = true;
+            disableButton();
+
+            setTimeout(function () {
+                if (sectionIndex === 3) {
+                    document.body.classList.add('green-background');
                 }
-            });
 
-            function navigateToNextSection() {
-                var currentSectionId = 'next-section' + sectionIndex;
-                var currentSection = document.getElementById(currentSectionId);
+                currentSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
 
-                if (currentSection) {
-                    isScrolling = true;
-                    disableButton();
+                enableButton();
+                isScrolling = false;
+                sectionIndex++;
 
-                    setTimeout(function () {
-                        currentSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-
-                        enableButton();
-                        isScrolling = false;
-                        sectionIndex++;
-
-                        if (sectionIndex > 3) {
-                            sectionIndex = 1;
-                        }
-                    }, 100); // Adjust the timeout as needed
+                if (sectionIndex > 3) {
+                    sectionIndex = 1;
                 }
-            }
+            }, 100);
+        }
+    }
 
-            function disableButton() {
-                nextBtn.style.pointerEvents = 'none';
-            }
+    function disableButton() {
+        nextBtn.style.pointerEvents = 'none';
+    }
 
-            function enableButton() {
-                nextBtn.style.pointerEvents = 'auto';
-            }
-        });
-    </script>
+    function enableButton() {
+        nextBtn.style.pointerEvents = 'auto';
+    }
+});
+
+    </script> 
 </body>
-
 </html>
