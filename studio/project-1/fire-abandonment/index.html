@@ -108,11 +108,14 @@
             enterLink3.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                document.body.classList.add('transitioning', 'slide-out');
+                // Add the transitioning class and green background
+                document.body.classList.add('transitioning', 'green-background');
 
+                // Delay opening the link to allow time for the green background transition
                 setTimeout(function () {
+                    // Open the link immediately after the delay
                     window.location.href = "https://abbykalman.github.io/core-2-interaction/studio/project-1/choose-path-2/index.html";
-                }, 800); // Adjust the timeout as needed
+                }, 800); // Adjust the delay time as needed
             });
 
             function navigateToNextSection() {
@@ -124,10 +127,6 @@
                     disableButton();
 
                     setTimeout(function () {
-                        if (sectionIndex === 3) {
-                            document.body.classList.add('green-background');
-                        }
-
                         currentSection.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
@@ -152,6 +151,6 @@
                 nextBtn.style.pointerEvents = 'auto';
             }
         });
-    </script>
+    </script> 
 </body>
 </html>

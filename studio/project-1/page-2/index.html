@@ -19,9 +19,107 @@
         <div class="rotating-ellipse ellipse2"></div>
         <div class="rotating-ellipse ellipse3"></div>
     </div>
-    <a href="#next-section" class="next-section-button">Next Section</a>
-</body>
-<div id="next-section" class="white-page">
-    <p class="title">Next Section Title</p>
+    <a href="#" class="next-section-button" id="nextBtn">Next Section</a>
+ <!-- Section 1 -->
+ <div id="next-section1" class="white-page">
+    <p class="title"></p>
+    <p class="second">
+        <p class="title">
+            <span class="yes">In Poetry,</span> the number of beginnings so far exceeds the number of endings
+            that we cannot even conceive of it. Not every poem is finished—one poem is <span class="abandonment">abandoned,</span> another
+            catches <span class="fire">fire</span> and is <span class="wind"> carried away by the wind</span>, which may be an ending,<span class="last-sentence"> but it is
+                the ending of a poem without an <span class="yes">End.</span> </span>
+        </p>
+    </p>
+    <p class="third"></p>
 </div>
+
+<!-- Section 2 -->
+<div id="next-section2" class="white-page">
+    <p class="title"></p>
+    <p class="second"> <span class="yes">Paul Valéry,</span> the French poet and thinker, once said that >no poem is ever ended, that every
+        poem is merely This saying is also attributed to Stéphane Mallarmé, for where 
+    </p>
+    <p class="third"></p>
+</div>
+
+<!-- Section 3 -->
+<div id="next-section3" class="white-page">
+    <p class="title"></p>
+    <p class="third">
+        <span class="yes">Paul Valéry</span> also described his perception of first lines so vividly, and to my mind so
+        that I have never forgotten it: the opening line of a poem, he said, is like finding a
+        on the ground, a piece of fallen fruit you have never seen before, and the poet’s
+        task is to create the tree from which such a
+    </p>
+
+    <!-- Enter button code here -->
+    <a href="#" class="enter-button" id="enterLink3">
+        <div class="enter-container">
+            <div class="arrow-container"></div>
+        </div>
+    </a>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var nextBtn = document.getElementById('nextBtn');
+        var enterLink3 = document.getElementById('enterLink3');
+        var sectionIndex = 1;
+        var isScrolling = false;
+
+        nextBtn.addEventListener('click', function () {
+            if (!isScrolling) {
+                navigateToNextSection();
+            }
+        });
+
+        enterLink3.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Add the transitioning class and green background
+            document.body.classList.add('transitioning', 'green-background');
+
+            // Delay opening the link to allow time for the green background transition
+            setTimeout(function () {
+                // Open the link immediately after the delay
+                window.location.href = "https://abbykalman.github.io/core-2-interaction/studio/project-1/choose-path-3/";
+            }, 800); // Adjust the delay time as needed
+        });
+
+        function navigateToNextSection() {
+            var currentSectionId = 'next-section' + sectionIndex;
+            var currentSection = document.getElementById(currentSectionId);
+
+            if (currentSection) {
+                isScrolling = true;
+                disableButton();
+
+                setTimeout(function () {
+                    currentSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    enableButton();
+                    isScrolling = false;
+                    sectionIndex++;
+
+                    if (sectionIndex > 3) {
+                        sectionIndex = 1;
+                    }
+                }, 100);
+            }
+        }
+
+        function disableButton() {
+            nextBtn.style.pointerEvents = 'none';
+        }
+
+        function enableButton() {
+            nextBtn.style.pointerEvents = 'auto';
+        }
+    });
+</script> 
+</body>
 </html>
+

@@ -4,18 +4,20 @@ body {
   margin: 0;
   transition: background-color 0.8s ease-out; /* Add transition for background color */
 }
+
 body.transitioning {
   background-color: rgb(128, 177, 22);
 }
 
 body.green-background {
-  background-color: rgb(128, 177, 22) !important;
-  transition: background-color 0.8s ease-out !important;
+    background-color: rgb(128, 177, 22) !important;
+    transition: background-color 0.8s ease-out !important;
 }
 
 body.slide-out {
   animation: none !important; /* Disable the slide-out animation */
 }
+
 
 .content {
   text-align: center;
@@ -32,10 +34,10 @@ body.slide-out {
 }
 
 body.slide-out .end {
-  color: rgb(10, 123, 2);
+  color: rgb(10, 123, 2); /* Green color */
+  bottom: 30px; /* Adjust the final position */
   transition: color 0.8s ease-out; /* Add transition for color */
 }
-
 .rotating-container {
   display: flex;
   align-items: center;
