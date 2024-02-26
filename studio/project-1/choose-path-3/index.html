@@ -46,5 +46,40 @@
     class="pink-arrow-button">
     <div class="arrow-container"></div>
 </a>
+<script>
+    function handleArrowButtonClick(e) {
+        e.preventDefault();
+
+        // Prevent button movement
+        document.getElementById('arrowLink').style.pointerEvents = 'none';
+
+        // Add slide-out class for transition
+        document.body.classList.add('slide-out');
+
+        // Redirect to the next page after a delay
+        setTimeout(function () {
+            window.location.href = "https://abbykalman.github.io/core-2-interaction/studio/project-1/page-3/index.html";
+        }, 800);
+    }
+
+    // Event listener for arrow button click
+    document.getElementById('arrowLink').addEventListener('click', handleArrowButtonClick);
+
+    // Event listener for the end of the transition
+    document.body.addEventListener('animationend', function () {
+        // Add final class for the last frame of the animation
+        document.body.classList.add('final');
+
+        // Remove the slide-out class to allow scrolling
+        document.body.classList.remove('slide-out');
+
+        // Allow button clicks again
+        document.getElementById('arrowLink').style.pointerEvents = 'auto';
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.body.classList.remove('preload');
+    });
+</script>
 </body>
 </html>
