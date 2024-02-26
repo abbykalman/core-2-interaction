@@ -448,6 +448,107 @@ body.slide-out {
   animation: slideOut 0.8s ease-out;
 }
 
-/* Other existing styles remain unchanged */
+/* Add a media query for responsiveness */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+    margin-top: 60px;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .rotating-container {
+    height: 200px;
+    width: 200px;
+  }
+
+  .circle-text {
+    font-size: 8px;
+    margin-top: 30px;
+    margin-left: -25px;
+  }
+
+  .rotating-circle {
+    width: 100px; /* Adjusted width for smaller screens */
+    height: 100px; /* Adjusted height for smaller screens */
+    margin-top: 35px;
+  }
+
+  .rotating-circle.circle2,
+  .rotating-circle.circle3,
+  .rotating-circle.circle4,
+  .rotating-circle.circle5,
+  .rotating-circle.circle6 {
+    width: 250px; /* Adjusted width for smaller screens */
+    height: 300px; /* Adjusted height for smaller screens */
+  }
+.rotating-circle.circle1 {
+  width: 250px;
+  height: 300px;
+}
+  .end {
+    font-size: 40px;
+    bottom: 160px;
+    right: 20px;
+  }
+
+  .next-section-button {
+    bottom: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    top: 70%;
+    border: 5px solid pink;
+  }
+
+  .enter-container {
+    width: 1px;
+    height: 1px;
+  }
+
+  .next-section-button:before {
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 20px solid pink;
+    margin-left: 33px;
+  }
+
+  .white-page {
+    padding: 10px;
+  }
+
+  .title,
+  .second,
+  .third {
+    font-size: 20px;
+    width: 480px;
+  }
+
+  .yes {
+    font-size: 30px;
+  }
+
+  .yes-cloud {
+    font-size: 30px;
+    padding: 10px 20px;
+  }
+
+  @font-face {
+    font-family: "H1";
+    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"),
+      url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+  }
+
+  @font-face {
+    font-family: "different-type";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+  }
+}
+
 
 

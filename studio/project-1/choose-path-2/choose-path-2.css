@@ -143,4 +143,12 @@ body.slide-out .gradient-overlay {
         margin-left: 105px;
         width: 300px;
     }
+    @font-face {
+        font-family: "H1";
+        src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+    }
+    @font-face {
+        font-family: "different-type";
+        src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+    }
 }

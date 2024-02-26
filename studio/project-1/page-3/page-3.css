@@ -361,3 +361,137 @@ h3 {
   #next-section4:hover .enter-container .arrow-container {
     border-top-color: pink; /* Change arrow color on hover */
   }
+  @media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+        margin-top: 10px;
+    width: 80%;
+    }
+
+    .ongoing {
+        margin-right: 75px;
+        margin-top: 15px;
+    }
+
+    .life {
+        font-size: 90px;
+        margin-left: 310px;
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 300px;
+        margin-top: 5px;
+        font-size: 200px;
+    }
+
+    .intro {
+        font-size: 55px;
+        margin-right: 150px;
+        margin-top: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+        width: 500px;
+        margin-top: 60px;
+    }
+
+    .yes {
+        font-size: 30px;
+    }
+
+    .second {
+        font-size: 20px;
+        width: 500px;
+    }
+
+    .third {
+        font-size: 20px;
+        width: 500px;
+    }
+
+    .fourth {
+        font-size: 20px;
+        width: 500px;
+    }
+
+    .rotating-container {
+        top: 30px;
+    }
+
+    .dynamic-ellipse {
+        margin: 0 10px;
+    }
+
+    .content {
+        margin: 10px;
+    }
+
+    .left-paragraph {
+        margin-top: -210px;
+        width: 160%;
+        font-size: 10px;
+    }
+
+    .right-paragraph {
+        margin-top: 100px;
+        width: 160%;
+        font-size: 10px;
+    }
+
+    #next-section4 .enter-container {
+        width: 85px;
+        height: 85px;
+        border-width: 5px;
+        right: 2%;
+    }
+
+    .white-page {
+        padding: 10px;
+    }
+
+    .next-section-button {
+        bottom: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        border: 3px solid pink;
+    }
+
+    .next-section-button:before {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 15px solid pink;
+        margin-left: 23.5px;
+    }
+    .ellipse1 {
+        width: 20px;
+        height: 30px;
+    }
+
+    .ellipse2 {
+        width: 30px;
+        height: 50px;
+    }
+
+    .ellipse3 {
+        width: 50px;
+        height: 80px;
+    }
+
+    .ellipse4 {
+        width: 70px;
+        height: 100px;
+    }
+
+    .ellipse5 {
+        width: 90px;
+        height: 120px;
+    }
+   
+}

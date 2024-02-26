@@ -149,6 +149,11 @@ h4 {
     color: green;
     font-size: 60px;
   }
+  .yes-2 {
+    font-family: "H1", cursive;
+    color: green;
+    font-size: 45px;
+  }
   .second {
     color: pink;
     font-size: 40px;
@@ -217,7 +222,7 @@ h4 {
 
 .next-section-button {
     position: fixed;
-    bottom: 30px;
+    bottom: 60px;
     left: 30px;
     width: 70px;
     height: 70px;
@@ -243,3 +248,135 @@ h4 {
   html {
     scroll-behavior: smooth;
   }
+ /* Your existing CSS */
+
+/* Add a media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+        margin-top: 15px;
+    margin-left: 50px;
+        padding: 0 0.5rem;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-top: -20px;
+        margin-left: -13px;
+    }
+
+    h3 {
+        font-size: 60px;
+        margin-top: -10px;
+        margin-left: 50px;
+    }
+
+    .intro {
+        font-size: 60px;
+        margin-right: 50px;
+        margin-top: 20px;
+    }
+
+    h4 {
+        margin-top: 430px;
+        font-size: 15px;
+    }
+
+    .rotating-ellipse {
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .ellipse1 {
+        border: 2px dotted pink;
+        animation: stretch1 7s linear infinite;
+        transform: perspective(400px) rotateX(45deg);
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 300px;
+        margin-top: -100px;
+        margin-left: -30px;
+    }
+
+    .ellipse2 {
+        border: 2px dashed green;
+        animation: stretch2 6s linear infinite;
+        transform: perspective(450px) rotateX(45deg);
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -220px;
+    }
+
+    .ellipse3 {
+        border: 2px dotted green;
+        animation: stretch3 8s linear infinite;
+        transform: perspective(350px) rotateX(45deg);
+        top: 50%;
+        left: 50%;
+        width: 75px;
+        height: 200px;
+        margin-top: -10px;
+        margin-left: 155px;
+    }
+
+    .title {
+        font-size: 16px;
+        width: 300px;
+        margin-top: 60px;
+    }
+
+    .yes {
+        font-size: 24px;
+    }
+    .yes-2 {
+        font-size: 22px;
+    }
+
+    .second {
+        font-size: 16px;
+        width: 300px;
+    }
+
+    .third {
+        font-size: 12px;
+        width: 800px;
+    }
+
+    #next-section3 .enter-container {
+        width: 85px;
+        height: 85px;
+        border-width: 5px;
+        right: 2%;
+    }
+
+    .white-page {
+        padding: 10px;
+    }
+
+    .next-section-button {
+        bottom: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        border: 3px solid pink;
+    }
+
+    .next-section-button:before {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 15px solid pink;
+        margin-left: 23.5px;
+    }
+    @font-face {
+        font-family: "H1";
+        src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+    }
+    @font-face {
+        font-family: "different-type";
+        src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+    }
+}

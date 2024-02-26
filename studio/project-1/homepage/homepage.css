@@ -365,4 +365,12 @@ body.slide-out {
     .enter-text {
         font-size: 16px;
     }
+    @font-face {
+        font-family: "H1";
+        src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+    }
+    @font-face {
+        font-family: "different-type";
+        src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+    }
 }
