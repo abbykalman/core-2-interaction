@@ -2,20 +2,30 @@ body {
   background-color: rgb(255, 255, 255);
   color: white;
   margin: 0;
-  transition: background-color 0.8s ease-out; /* Add transition for background color */
+ 
+}
+.body-slide-out {
+  animation: slideOut 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+  animation-play-state: running;
 }
 
-body.transitioning {
-  background-color: rgb(128, 177, 22);
-}
-
+/* Apply only the transition property in the green-background class */
 body.green-background {
-    background-color: rgb(128, 177, 22) !important;
-    transition: background-color 0.8s ease-out !important;
+  background-color: rgb(128, 177, 22) !important;
+  transition: background-color 0.8s ease-out !important;
 }
 
-body.slide-out {
-  animation: none !important; /* Disable the slide-out animation */
+/* Add a rule to pause the animation when the no-animation class is present */
+body.no-animation.body-slide-out {
+  animation-play-state: paused;
+}
+@keyframes slideOut {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
 }
 
 
@@ -33,11 +43,6 @@ body.slide-out {
   transition: color 0.8s ease-out; /* Adjust as needed */
 }
 
-body.slide-out .end {
-  color: rgb(10, 123, 2); /* Green color */
-  bottom: 30px; /* Adjust the final position */
-  transition: color 0.8s ease-out; /* Add transition for color */
-}
 .rotating-container {
   display: flex;
   align-items: center;
@@ -217,12 +222,6 @@ h1 {
     transition: color 0.8s ease-out, bottom 0.8s ease-out; /* Add transition for color and bottom */
 }
 
-body.slide-out .end {
-    color: rgb(10, 123, 2); /* Green color */
-    bottom: 30px; /* Adjust the final position */
-}
-
-
 .next-section-button {
   position: fixed;
   bottom: 30px;
@@ -383,26 +382,7 @@ html {
   transition: opacity 0.3s ease;
 }
 
-.fruit-container:hover .fruit {
-  animation: fallAnimation 5s linear infinite;
-}
 
-@keyframes fallAnimation {
-  0% {
-    transform: translateY(-100vh) rotate(0deg);
-    opacity: 1;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
 #next-section3 {
   position: relative;
 }
@@ -443,9 +423,6 @@ html {
 
 #next-section3:hover .enter-container .arrow-container {
   border-top-color: pink; /* Change arrow color on hover */
-}
-body.slide-out {
-  animation: slideOut 0.8s ease-out;
 }
 
 /* Add a media query for responsiveness */

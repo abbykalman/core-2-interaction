@@ -313,9 +313,6 @@ p {
     color: pink; /* Pink color for "ENTER" text on hover */
 }
 
-body.slide-out {
-    animation: slideOut 0.8s ease-out;
-}
 
 @keyframes slideOut {
     0% {
@@ -324,6 +321,10 @@ body.slide-out {
     100% {
         transform: translateX(-100%);
     }
+}
+
+body.slide-out {
+    animation: slideOut 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
 }
 
 

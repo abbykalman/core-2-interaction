@@ -3,7 +3,29 @@ body {
     color: white;
     margin: 0;
 }
-
+.body-slide-out {
+    animation: slideOut 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+    animation-play-state: running;
+  }
+  
+  /* Apply only the transition property in the green-background class */
+  body.green-background {
+    background-color: rgb(128, 177, 22) !important;
+    transition: background-color 0.8s ease-out !important;
+  }
+  
+  /* Add a rule to pause the animation when the no-animation class is present */
+  body.no-animation.body-slide-out {
+    animation-play-state: paused;
+  }
+  @keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
 @font-face {
     font-family: "H2";
     src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);

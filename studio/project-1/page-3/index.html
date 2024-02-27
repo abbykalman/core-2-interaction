@@ -73,65 +73,67 @@
     </a>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var nextBtn = document.getElementById('nextBtn');
-        var enterLink3 = document.getElementById('enterLink3');
-        var sectionIndex = 1;
-        var isScrolling = false;
+document.addEventListener("DOMContentLoaded", function () {
+    var nextBtn = document.getElementById('nextBtn');
+    var enterLink3 = document.getElementById('enterLink3');
+    var sectionIndex = 1;
+    var isScrolling = false;
 
-        nextBtn.addEventListener('click', function () {
-            if (!isScrolling) {
-                navigateToNextSection();
-            }
-        });
-
-        enterLink3.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            // Add the transitioning class and green background
-            document.body.classList.add('transitioning', 'green-background');
-
-            // Delay opening the link to allow time for the green background transition
-            setTimeout(function () {
-                // Open the link immediately after the delay
-                window.location.href = "https://abbykalman.github.io/core-2-interaction/studio/project-1/choose-path-4/";
-            }, 800); // Adjust the delay time as needed
-        });
-
-        function navigateToNextSection() {
-            var currentSectionId = 'next-section' + sectionIndex;
-            var currentSection = document.getElementById(currentSectionId);
-
-            if (currentSection) {
-                isScrolling = true;
-                disableButton();
-
-                setTimeout(function () {
-                    currentSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-
-                    enableButton();
-                    isScrolling = false;
-                    sectionIndex++;
-
-                    // Loop back to the first section after the fourth section
-                    if (sectionIndex > 4) {
-                        sectionIndex = 1;
-                    }
-                }, 100);
-            }
-        }
-
-        function disableButton() {
-            nextBtn.style.pointerEvents = 'none';
-        }
-
-        function enableButton() {
-            nextBtn.style.pointerEvents = 'auto';
+    nextBtn.addEventListener('click', function () {
+        if (!isScrolling) {
+            navigateToNextSection();
         }
     });
+
+    enterLink3.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Add the transitioning class
+        document.body.classList.add('green-background', 'body-slide-out');
+
+        // Delay opening the link to allow time for the green background transition
+        setTimeout(function () {
+            // Modify the background color directly
+            document.body.style.backgroundColor = 'rgb(128, 177, 22)';
+
+            // Open the link immediately after the delay
+            window.location.href = "https://abbykalman.github.io/core-2-interaction/studio/project-1/choose-path-4/";
+        }, 800); // Adjust the delay time as needed
+    });
+
+    function navigateToNextSection() {
+        var currentSectionId = 'next-section' + sectionIndex;
+        var currentSection = document.getElementById(currentSectionId);
+
+        if (currentSection) {
+            isScrolling = true;
+            disableButton();
+
+            setTimeout(function () {
+                currentSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                enableButton();
+                isScrolling = false;
+                sectionIndex++;
+
+                if (sectionIndex > 4) {
+                    sectionIndex = 1;
+                }
+            }, 100);
+        }
+    }
+
+    function disableButton() {
+        nextBtn.style.pointerEvents = 'none';
+    }
+
+    function enableButton() {
+        nextBtn.style.pointerEvents = 'auto';
+    }
+});
 </script>
 </body>
 </html>
