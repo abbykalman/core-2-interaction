@@ -237,71 +237,32 @@ h1 {
     }
     @media only screen and (max-width: 600px) {
         h1 {
-            font-size: 70px;
-            margin-bottom: 30px;
-            padding: 0 2rem;
+            font-size: 40px;
+            margin-bottom: 15px;
+            padding: 0 1rem;
         }
     
         h2 {
-            font-size: 35px;
+            font-size: 20px;
         }
     
         h3 {
-            font-size: 25px;
-            white-space: normal; /* Allowing the text to wrap */
+            font-size: 15px;
         }
     
         h4 {
-            font-size: 35px;
+            font-size: 20px;
         }
     
         h5 {
-            font-size: 30px;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-left: 0;
+            text-align: center;
+            width: 80%;
+            margin-left: 10px;
         }
-    
-        h6 {
-            margin-top: 30px;
-            margin-left: 0; /* Resetting margin-left */
-            width: 80%; /* Making sure it spans the full width */
-            font-size: 15px;
-            text-align: center; /* Center the text */
-        }
-        .pink-arrow-button {
-            width: 40px;
-            height: 40px;
-            border: 5px solid pink;
-            border-radius: 50%;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: bottom 1s ease-in-out;
-        }
-    
-        .pink-arrow-button .arrow-container {
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 15px solid pink;
-        }
-    
-        body.slide-out {
-            transform: translateY(-100vh);
-            transition: transform 1s ease-in-out, background-color 1s ease-in-out; /* Added background-color transition */
-            position: relative;
-        }
-    
-        body.slide-out .gradient-overlay {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 200vh;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-            transition: height 15s ease-in-out;
-            z-index: 1;
-        }
-        .marquee-container {
-            overflow: auto; /* Allowing vertical scrolling for marquee */
-        }
+
     
         @font-face {
             font-family: "H1";
@@ -312,5 +273,68 @@ h1 {
             font-family: "different-type";
             src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
         }
+    
+        .pink-arrow-button {
+            width: 30px;
+            height: 30px;
+            border: 3px solid pink;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            z-index: 999; /* Ensure it's on top */
+        }
+    
+        .pink-arrow-button .arrow-container {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid pink;
+        }
+    
+        h6 {
+            font-size: 14px;
+            text-align: center;
+            width: 40%; /* Adjust the width as needed */
+            margin: 10px auto; /* Center h6 and add some margin */
+        }
+    
+        .marquee-container {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 80%; /* Adjust the width as needed */
+            margin: 10px auto; /* Center marquee and add some margin */
+        }
+    
+        .marquee-text {
+            animation: marquee 5s linear infinite;
+        }
+    
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    
+        .marquee-text {
+            animation: marquee 5s linear infinite;
+        }
+    
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     }
     
+    
+        
