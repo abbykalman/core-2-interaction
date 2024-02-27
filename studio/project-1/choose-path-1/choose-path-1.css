@@ -129,23 +129,50 @@ h2 {
 }
 @media only screen and (max-width: 600px) {
     h1 {
-        font-size: 70px; /* Adjusted font size for smaller screens */
+        font-size: 70px;
         margin-bottom: 30px;
-        padding: 0 2rem; /* Adjusted padding for smaller screens */
+        padding: 0 rem;
     }
 
     h2 {
-        font-size: 15px; /* Adjusted font size for smaller screens */
-        margin-left: 105px; /* Adjusted margin for smaller screens */
-        margin-top: 30px;
-        width: 300px;
+        font-family: "different-type", sans-serif;
+        text-align: center;
+        font-size: 20px;
+        margin: 0 auto; /* Center the h2 on the page */
+        max-width: 80%; /* Adjusted maximum width */
+        margin-top: 30px; /* Adjusted margin top */
     }
-    @font-face {
-        font-family: "H1";
-        src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+
+    .pink-arrow-button {
+        width: 50px; /* Adjusted width */
+        height: 50px; /* Adjusted height */
+        bottom: 15px; /* Adjusted bottom position */
+        left: 15px; /* Adjusted left position */
+        border: 5px solid pink; /* Adjusted border */
+        transition: bottom 1s ease-in-out; /* Added transition for button movement */
     }
-    @font-face {
-        font-family: "different-type";
-        src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+
+    .pink-arrow-button .arrow-container {
+        border-left: 12px solid transparent; /* Adjusted border */
+        border-right: 12px solid transparent; /* Adjusted border */
+        border-top: 17px solid pink; /* Adjusted border */
+    }
+
+    .marquee-container {
+        width: 90%; /* Adjusted width for the marquee container */
+        margin: 0 auto; /* Center the marquee on the page */
+        white-space: nowrap; /* Ensure the marquee doesn't wrap */
+        overflow: hidden; /* Hide any overflowing content */
+    }
+    
+    /* Add this style to ensure the marquee content is visible */
+    .marquee-content {
+        display: inline-block;
+        animation: marquee 8s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
     }
 }

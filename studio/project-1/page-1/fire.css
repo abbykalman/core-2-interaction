@@ -28,7 +28,11 @@ body.no-animation.body-slide-out {
       transform: translateX(-100%);
   }
 }
-
+.last-sentence {
+  background: linear-gradient(to right, rgba(244, 243, 243, 0) 0%, white 100%);
+  transition: background 0.5s ease;
+  animation: pulsate 3s infinite alternate;
+}
 
 .content {
   text-align: center;
@@ -302,21 +306,7 @@ html {
   display: inline-block;
 }
 
-.fruit {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 3px dashed rgb(10, 123, 2);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-#next-section2 {
-  background-color: rgb(128, 177, 22);
-  position: relative;
-}
+
 
 #next-section3 {
   position: relative;
