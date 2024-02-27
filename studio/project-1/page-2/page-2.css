@@ -270,9 +270,12 @@ h4 {
   html {
     scroll-behavior: smooth;
   }
- /* Your existing CSS */
-
-/* Add a media query for smaller screens */
+  h5 {
+    font-family: "H1", cursive;
+    color: rgb(128, 177, 22);
+    font-size: 300px;
+    text-align: center;
+}
 @media only screen and (max-width: 600px) {
      
 
@@ -303,7 +306,7 @@ h4 {
     .rotating-ellipse {
         position: absolute;
         border-radius: 50%;
-      
+        margin-top: 20px;
     }
 
     .ellipse1 {
