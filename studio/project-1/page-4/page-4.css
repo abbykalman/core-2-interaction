@@ -12,7 +12,28 @@ body {
     align-items: center;
     justify-content: center;
 }
+.body-slide-out {
+    animation: slideOut 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+    animation-play-state: running;
+  }
+  
+  .no-animation .container {
+    animation-play-state: paused;
+}
 
+body.green-background {
+    background-color: rgb(128, 177, 22) !important;
+    transition: background-color 0.8s ease-out !important;
+}
+
+  @keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 
 h1, h2 {
@@ -214,59 +235,19 @@ h1 div, h2 div {
   html {
     scroll-behavior: smooth;
   }
-  #next-section4 {
-    position: relative;
-  }
-  
-  #next-section4 .fourth {
-    position: relative;
-  }
-  
-  #next-section4 .enter-container {
-    position: absolute;
-    bottom: 10%;
-    right: 5%; /* Adjust this value to move the button to the right */
-    background-color: white;
-    border-radius: 50%;
-    width: 170px;
-    height: 170px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    border: 10px solid rgb(10, 123, 2);
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-  }
-  
-  #next-section4:hover .enter-container {
-    border-color: #ffc0cb; /* Pink border color on hover */
-  }
-  
-  #next-section4 .enter-container .arrow-container {
-    width: 0;
-    height: 0;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
-    border-top: 25px solid rgb(10, 123, 2);
-    transform: rotate(-90deg); /* Rotate the arrow to point right */
-  }
-  
-  #next-section4:hover .enter-container .arrow-container {
-    border-top-color: pink; /* Change arrow color on hover */
-  }
-  .title {
-    font-size: 35px;
+
+
+.title {
     color: pink;
+    font-size: 30px;
     text-align: center;
-    position: absolute;
     font-family: "Heavitas", sans-serif;
-    width: 1000px;
-    margin-top: 120px;
-  }
+    position: absolute;
+    width: 1000px; 
+}
   .second {
     color: pink;
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     font-family: "Heavitas", sans-serif;
     position: absolute;
@@ -274,7 +255,7 @@ h1 div, h2 div {
   }
   .third {
     color: pink;
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     font-family: "Heavitas", sans-serif;
     position: absolute;
@@ -282,14 +263,60 @@ h1 div, h2 div {
   }
   .fourth {
     color: pink;
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     font-family: "Heavitas", sans-serif;
     position: absolute;
     width: 1000px;
   }
- 
-  
+ .fifth {
+    color: pink;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Heavitas", sans-serif;
+    position: absolute;
+    width: 1000px;
+ }
+ .sixth {
+    color: pink;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Heavitas", sans-serif;
+    position: absolute;
+    width: 1000px;
+ }
+ .seventh {
+    color: pink;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Heavitas", sans-serif;
+    position: absolute;
+    width: 1000px;
+ }
+ .eighth {
+    color: pink;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Heavitas", sans-serif;
+    position: absolute;
+    width: 1000px;
+ }
+ .ninth {
+    color: pink;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Heavitas", sans-serif;
+    position: absolute;
+    width: 1000px;
+ }
+ .tenth {
+    color: pink;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Heavitas", sans-serif;
+    position: absolute;
+    width: 1000px;
+ }
   .white-page {
     background-color: white;
     height: 100vh;
@@ -301,5 +328,106 @@ h1 div, h2 div {
   .yes {
     font-family: "H1", cursive;
     color: green;
-    font-size: 60px;
+    font-size: 50px;
   }
+  #next-section10 {
+    position: relative;
+  }
+  
+  #next-section10 .tenth {
+    position: relative;
+  }
+  
+ 
+  .enter-container {
+    position: absolute;
+    top: 1120%;
+    right: 5%;
+    background-color: white;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border: 7px solid rgb(10, 123, 2);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+.enter-container .arrow-container {
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 25px solid rgb(10, 123, 2);
+    transform: rotate(-90deg);
+}
+  #next-section10:hover .enter-container {
+    border-color: #ffc0cb; /* Pink border color on hover */
+  }
+  
+  #next-section10 .enter-container .arrow-container {
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 25px solid rgb(10, 123, 2);
+    transform: rotate(-90deg); /* Rotate the arrow to point right */
+  }
+  
+  #next-section10:hover .enter-container .arrow-container {
+    border-top-color: pink; /* Change arrow color on hover */
+  }
+  @media only screen and (max-width: 600px) {
+    h1, h2 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .text-container {
+        flex-direction: row; /* Display text side by side on smaller screens */
+        justify-content: space-around; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+    }
+
+    .ellipse {
+        width: 150px; /* Adjust ellipse size for smaller screens */
+        height: 75px;
+        animation: unfold-sm 2s linear infinite, move-sm 10s linear infinite, rotate-sm 5s linear infinite;
+    }
+
+    /* Additional keyframes for smaller screens */
+    @keyframes unfold-sm {
+        0%, 100% {
+            transform: scale(0.5);
+            opacity: 0.8;
+        }
+        25% {
+            transform: scale(0.75);
+            opacity: 0.6;
+        }
+        50% {
+            transform: scale(0.6);
+            opacity: 0.8;
+        }
+        75% {
+            transform: scale(0.7);
+            opacity: 0.7;
+        }
+    }
+
+    @keyframes move-sm {
+        0%, 100% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(15px, 15px);
+        }
+        50% {
+            transform: translate(-10px, -20px);
+        }
+        75% {
+            transform: translate(20px, -10px);
+        }
+    }
+}

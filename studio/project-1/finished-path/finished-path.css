@@ -310,7 +310,18 @@ p {
     display: none; /* Hide text */
 }
 
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
+body.slide-out {
+    animation: slideOut 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
 
 @media (max-width: 767px) {
     h1 {

@@ -4,6 +4,7 @@ body {
   margin: 0;
  
 }
+
 .body-slide-out {
   animation: slideOut 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
   animation-play-state: running;
@@ -277,54 +278,7 @@ html {
   color: green;
   font-size: 60px;
 }
-.abandonment {
-  color: #df767b; /* A subdued color for a faded effect */
-  animation: abandonmentAnimation 2s linear infinite alternate;
-}
-.last-sentence {
-  background: linear-gradient(to right, rgba(244, 243, 243, 0) 0%, white 100%);
-  transition: background 0.5s ease;
-  animation: pulsate 3s infinite alternate;
-}
-@keyframes pulsate {
-  0% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 10%; 
-  }
-}
-.fire:hover {
-  filter: drop-shadow(0 0 10px pink);
-  transition: filter 0.3s ease-in-out;
-}
-.wind {
-  position: relative;
-  display: inline-block;
-}
-.wind::after {
-  content: "wind";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
-  pointer-events: none;
-  transition: background 0.5s ease;
-  animation: windAnimation 5s linear infinite;
-}
 
-@keyframes windAnimation {
-  0%, 100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-  50% {
-      transform: translateX(100%);
-      opacity: 0;
-  }
-}
 .second {
   color: pink;
   font-size: 40px;
@@ -341,30 +295,8 @@ html {
   position: absolute;
   width: 1000px;
 }
-.yes-cloud {
-  font-family: "H1", cursive;
-  font-size: 60px;
-  color: rgb(10, 123, 2); /* Blue color, you can choose another color */
-  padding: 20px 40px; /* Adjust padding values based on your preference */
-  background-color: rgb(225, 227, 225); /* Light gray background */
-  border-radius: 50% 20%; /* First value for horizontal radius, second for vertical */
-  display: inline-block; /* Ensure the background color wraps around the text */
-  margin: 0;
-  animation: floatCloud 2s ease-in-out infinite; /* Add a floating animation */
-  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add a puffy text shadow */
-}
 
-@keyframes floatCloud {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-.accurate {
-  color: rgb(128, 177, 22);
-}
+
 .fruit-container {
   position: relative;
   display: inline-block;
@@ -381,7 +313,10 @@ html {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
+#next-section2 {
+  background-color: rgb(128, 177, 22);
+  position: relative;
+}
 
 #next-section3 {
   position: relative;
