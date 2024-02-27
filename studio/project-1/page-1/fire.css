@@ -483,7 +483,7 @@ html {
     border: 5px solid pink;
   }
 
-  .enter-container {
+  .enter-button {
     width: 1px;
     height: 1px;
   }
@@ -503,7 +503,7 @@ html {
   .second,
   .third {
     font-size: 20px;
-    width: 480px;
+    width: 330px;
   }
 
   .yes {

@@ -195,12 +195,7 @@ h1 {
         h4 {
             font-size: 35px;
         }
-        h5 {
-            margin-top: 30px;
-            margin-left: 105px;
-            width: 300px;
-            font-size: 15px;
-        }
+   
         @font-face {
             font-family: "H1";
             src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
@@ -209,4 +204,28 @@ h1 {
             font-family: "different-type";
             src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
         }
-    }
+    
+            h5 {
+                font-size: 24px; 
+                margin-top: 20px;
+                margin-left: 0;
+                text-align: center; 
+                width: 80%; 
+                margin-left: 40px;
+            }
+            .pink-arrow-button {
+                width: 40px; /* Adjusted width for smaller screens */
+                height: 40px; /* Adjusted height for smaller screens */
+                border: 5px solid pink; /* Adjusted border thickness for smaller screens */
+                bottom: 15px; /* Adjusted bottom position for smaller screens */
+                left: 15px; /* Adjusted left position for smaller screens */
+            }
+        
+            .pink-arrow-button .arrow-container {
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 15px solid pink;
+            }
+        }
+        
+    

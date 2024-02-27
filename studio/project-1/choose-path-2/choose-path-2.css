@@ -132,17 +132,21 @@ body.slide-out .gradient-overlay {
     h1 {
         font-size: 70px; /* Adjusted font size for smaller screens */
         margin-bottom: 30px;
-        padding: 0 2rem; /* Adjusted padding for smaller screens */
+        padding: 0 rem; /* Adjusted padding for smaller screens */
     }
 
     h2 {
         font-size: 35px; /* Adjusted font size for smaller screens */
     }
-    h3 {
-        font-size: 15px;
-        margin-left: 105px;
-        width: 300px;
+        h3 {
+            font-size: 24px; /* Adjusted font size for smaller screens */
+            margin-top: 20px;
+            margin-left: 0; /* Reset margin-left */
+            text-align: center; /* Center the text */
+            width: 100%; /* Make sure it spans the full width */
+        }
     }
+    
     @font-face {
         font-family: "H1";
         src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
@@ -151,4 +155,3 @@ body.slide-out .gradient-overlay {
         font-family: "different-type";
         src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
     }
-}
