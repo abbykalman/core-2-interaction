@@ -1,0 +1,81 @@
+body {
+    background: linear-gradient(to right, #979899, #83a4c8, #586d53);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    position: relative;
+    margin: 50px;
+    height: 200vh;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.images-container {
+    background-color: rgb(37, 83, 16);
+    padding: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    font-family: "H1", cursive;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+.fixed-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px; 
+    height: 30px; 
+    background-color: #333;
+    cursor: pointer;
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+}
+
+@font-face {
+    font-family: "H1";
+    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+}
+
+@font-face {
+    font-family: "H2";
+    src: local("Heavitas.ttf"), url("Heavitas.ttf") format("opentype") tech(color-COLRv1);
+}
+
+.clean {
+    font-family: "H2", sans-serif;
+}
+h4 {
+    font-family: "H2", sans-serif;
+}

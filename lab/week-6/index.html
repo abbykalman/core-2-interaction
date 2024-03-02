@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="week-6.css">
+    <title>Your Page Title</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Superbloom <span class="clean">Posters</span></h1>
+        <h2>Designed <span class="clean">by</span> AK</h2>
+        <h3>Finalized <span class="clean">02/29/2024</span></h3>
+    </div>
+
+    <div class="images-container">
+        <div class="images">
+            <img src="finalcorrected.jpg" alt="finalcorrected">
+            <img src="corrected-3.jpg" alt="corrected#3">
+            <img src="corrected-4.jpg" alt="corrected#4">
+            <img src="corrected-1.jpg" alt="corrected#1">
+            <img src="corrected-2.jpg" alt="corrected#2">
+            <img src="corrected-5.jpg" alt="corrected#5">
+        </div>
+    </div>
+
+    <h4>Within my code, "position: fixed" is used to keep the scrolling downward button at the top in place. When the person scrolls, the button stays put. The "position: relative" in my code is utilized to establish the positioning context for my child elements. Display flex is arranging elements h1, h2, and h3 in a column-like layout, stacked on one another. It also centers child elements vertically. In my code, display: grid creates a grid of 3 images by another 3 images and a gap of 30px in my code.</h4>
+    <button class="fixed-button" onclick="scrollToContent()"></button>
+
+    <div id="scroll-target">
+    </div>
+
+    <script>
+        function scrollToContent() {
+            const targetElement = document.getElementById('scroll-target');
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
