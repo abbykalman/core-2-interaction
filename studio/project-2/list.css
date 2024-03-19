@@ -1,26 +1,249 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #fffffff3;
+    margin: 0;
 }
-li {
-    font-family: "etna", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-   color: rgb(255, 123, 0);
-   font-size: 40px;
+
+.header-container {
+    text-align: center;
+    padding: 20px;
 }
+/* Add this section for styling additional stars */
+.star-image {
+    width: 80px; /* Adjust the width of the stars as needed */
+    height: auto;
+    position: absolute;
+    transition: transform 0.5s ease;
+    animation: bounceStars 1s ease infinite;
+    z-index: 1; /* Set a higher z-index to place stars in front of images */
+}
+
+/* Adjust the positions of the stars */
+.star-1 { top: 50px; left: 50px; }
+.star-2 { top: 150px; left: 200px; }
+.star-3 { top: 300px; left: 100px; }
+/* Add more star classes with different positions as needed */
+
+/* Add a class for images to set a lower z-index */
+.scrapbook-list li img {
+    z-index: 0; /* Set a lower z-index for the images */
+}
+
+@keyframes bounceStars {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
 h1 {
     font-family: "etna", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    color: #ff33cc;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.h1-shimmer {
+    color: transparent;
+    background: linear-gradient(90deg, #ff33cc, #ffccff, #ff6699);
+    background-size: 200% 100%;
+    background-clip: text;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: -200% 100%;
+    }
+}
+
+.em {
+    color: #ff33cc;
+    font-family: "H1", cursive;
+}
+
+.scrapbook-list li img {
+    width: 400px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.scrapbook-list li:hover img {
+    opacity: 1;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.scrapbook-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scrapbook-list li {
+    font-family: "etna", sans-serif;
     font-weight: 400;
     font-style: normal;
-   color: rgb(255, 123, 0);
-   font-size: 70px;
-   text-align: center;
+    font-size: 20px;
+    color: #ff6699;
+    margin: 10px;
+    width: 300px;
+    padding: 10px;
+    position: relative;
 }
-.light-orange {
-    color: rgb(244, 158, 46);
+
+.birds {
+    font-family: "H1", cursive;
+    font-size: 40px;
+    color: #ff33cc;
+}
+
+.accordion-btn {
+    cursor: pointer;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.accordion-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.scrapbook-list li:hover .accordion-content {
+    display: block;
+    opacity: 1;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.scrapbook-list li:hover img {
+    transform: rotate(5deg);
 }
 
 
+
+@font-face {
+    font-family: "H1";
+    src: local("Birds of Paradise ∏ PERSONAL USE ONLY.ttf"), url("Birds of Paradise ∏ PERSONAL USE ONLY.ttf") format("opentype") tech(color-COLRv1);
+}
+
+.q1,
+.q2,
+.q3,
+.q4,
+.q5,
+.q6,
+.q7,
+.q8,
+.q9,
+.q10 {
+    text-align: left;
+    margin-left: -500px;
+}
+
+.q2,
+.q4,
+.q6,
+.q8,
+.q10 {
+    text-align: right;
+    margin-right: -500px;
+}
+.header-image {
+    width: 140px; /* Adjust the width as needed */
+    height: auto;
+    transition: transform 0.5s ease; /* Add transition for a smooth effect */
+    animation: bounceStars 1s ease infinite; /* Bounce the stars continuously */
+}
+
+.left-image {
+    float: left;
+}
+
+.right-image {
+    float: right;
+}
+
+@keyframes bounceStars {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+/* Add this media query for responsiveness */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* Adjust the overall font size for smaller screens */
+    }
+
+    .header-container {
+        padding: 10px;
+    }
+
+    .h1-shimmer {
+        font-size: 40px; /* Adjust the heading font size */
+    }
+
+    .em {
+        font-size: 20px; /* Adjust the emphasized text font size */
+    }
+
+    .content-container {
+        padding: 5px; /* Adjust the padding for smaller screens */
+    }
+
+    .scrapbook-list li {
+        font-size: 14px; /* Adjust the font size of list items */
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 5px; /* Adjust the padding for list items */
+    }
+
+    .accordion-btn {
+        font-size: 20px; /* Adjust the font size of accordion buttons */
+    }
+
+    .accordion-content {
+        font-size: 14px; /* Adjust the font size of accordion content */
+    }
+
+    .header-image {
+        width: 100%;
+        height: auto;
+    }
+    .left-image,
+    .right-image {
+        width: 70px; /* Adjust the width of the stars */
+        height: auto;
+    }
+}
 
 
 
